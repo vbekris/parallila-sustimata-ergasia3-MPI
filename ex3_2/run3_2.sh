@@ -1,29 +1,25 @@
 #!/bin/bash
 
-# --- Ρυθμίσεις Πειραμάτων (Σύμφωνα με την Εκφώνηση) ---
+# --- Παράμετροι Πειραμάτων ---
 
 # 1. Διαστάσεις Πίνακα (10^3 έως 10^4)
-# Επιλέγουμε τιμές που διαιρούνται με το 32 για να μην έχουμε σφάλματα στο Scatter.
-# 1024  ~ 10^3
-# 10240 ~ 10^4
+# Τιμές που διαιρούνται με το 32 (P) για ομαλή κατανομή
 SIZES="1024 10240" 
 
-# 2. Ποσοστά Μηδενικών (Sparsity) - "0% έως 99%"
-# 0.00 = Πυκνός (Dense comparison baseline)
-# 0.50 = Ενδιάμεσος
-# 0.99 = Πολύ Αραιός (Το δυνατό σημείο του CSR)
+# 2. Ποσοστά Μηδενικών (Sparsity)
+# 0.00 = Dense, 0.50 = Mixed, 0.99 = Sparse (CSR Target)
 SPARSITIES="0.00 0.50 0.99"
 
-# 3. Αριθμός Επαναλήψεων - "1 έως 20"
+# 3. Αριθμός Επαναλήψεων (Variable Iterations)
 ITER_COUNTS="1 10 20"
 
-# 4. Αριθμός Διεργασιών (P)
+# 4. Αριθμός Διεργασιών (Scaling)
 PROCESSES="1 2 4 8 16 32"
 
 OUTPUT_FILE="results_final_report.txt"
 MACHINES_FILE="machines"
 
-# --- Compilation ---
+# --- Build ---
 echo "--- Compiling Project ---"
 make clean
 make
@@ -33,7 +29,7 @@ if [ ! -f ./ex3_2 ]; then
     exit 1
 fi
 
-# --- Header ---
+# --- Output Initialization ---
 echo "==================================================================" > $OUTPUT_FILE
 echo " FINAL REPORT EXPERIMENTS (Ex 3.2)" >> $OUTPUT_FILE
 echo " Sizes: 10^3 to 10^4 | Iters: 1 to 20 | Sparsity: 0% to 99%" >> $OUTPUT_FILE
@@ -41,7 +37,7 @@ echo " Date: $(date)" >> $OUTPUT_FILE
 echo "==================================================================" >> $OUTPUT_FILE
 echo "" >> $OUTPUT_FILE
 
-# --- Έναρξη Πειραμάτων ---
+# --- Execution Loops ---
 echo "🚀 Starting Experiments..."
 
 for n in $SIZES; do
@@ -56,7 +52,7 @@ for n in $SIZES; do
             echo "   [Sparsity: $sp | Iterations: $iters]" >> $OUTPUT_FILE
             
             for p in $PROCESSES; do
-                # Έλεγχος διαίρεσης (Safety check)
+                # Έλεγχος συμβατότητας N και P
                 if (( n % p != 0 )); then
                     continue
                 fi
