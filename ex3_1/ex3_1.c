@@ -1,18 +1,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <mpi.h>
-#include "timer.h" // Το αρχείο που ανέβασες
+#include "timer.h" 
 
 int main(int argc, char* argv[]) {
     int my_rank, comm_sz;
     int n, N, local_n;
     
-    // --- MPI Init ---
+    // Αρχικοποίηση περιβάλλοντος MPI
     MPI_Init(&argc, &argv);
     MPI_Comm_rank(MPI_COMM_WORLD, &my_rank);
     MPI_Comm_size(MPI_COMM_WORLD, &comm_sz);
 
-    // --- Έλεγχος Ορισμάτων (Μόνο ο 0 μιλάει) ---
+    // Έλεγχος ορισμάτων εισόδου
     if (argc != 2) {
         if (my_rank == 0) printf("Usage: %s <degree n>\n", argv[0]);
         MPI_Finalize();
@@ -20,141 +20,117 @@ int main(int argc, char* argv[]) {
     }
 
     n = atoi(argv[1]);
-    N = n + 1; // Οι συντελεστές είναι n+1 (π.χ. βαθμός 1 -> ax+b -> 2 όροι)
+    N = n + 1; // Πλήθος συντελεστών (βαθμός n -> n+1 όροι)
 
-    // --- Safety Check: Διαιρετότητα ---
+    // Έλεγχος διαιρετότητας: Το N πρέπει να διαιρείται ακριβώς με το πλήθος διεργασιών
+    // για να λειτουργήσει σωστά η MPI_Scatter.
     if (N % comm_sz != 0) {
         if (my_rank == 0) {
             printf("Error: Matrix size N=%d is not divisible by P=%d.\n", N, comm_sz);
-            printf("Please choose different parameters.\n");
         }
         MPI_Finalize();
         return 0;
     }
 
-    local_n = N / comm_sz; // Πόσα στοιχεία του A θα πάρει ο καθένας
+    // Υπολογισμός του μεγέθους του πίνακα A που αναλογεί σε κάθε διεργασία
+    local_n = N / comm_sz;
 
-    // --- Δέσμευση Μνήμης (Allocation) ---
+    /* --- Δέσμευση Μνήμης --- */
     
-    // 1. local_A: Το κομμάτι του A που θα επεξεργαστώ
+    // 1. local_A: Αποθηκεύει το τμήμα του πίνακα A που θα επεξεργαστεί η διεργασία
     int *local_A = (int*) malloc(local_n * sizeof(int));
     
-    // 2. B: Ολόκληρο το B (το χρειάζονται όλοι για τον πολλαπλασιασμό)
+    // 2. B: Αποθηκεύει ολόκληρο το πολυώνυμο B.
+    // Χρειαζόμαστε όλο το B σε κάθε διεργασία για να γίνει σωστά η συνέλιξη (convolution).
     int *B = (int*) malloc(N * sizeof(int));
 
-    // 3. local_C: Το μερικό αποτέλεσμα.
-    // Προσοχή: Το αποτέλεσμα πολ/σμου βαθμού n έχει βαθμό 2n.
-    // Μέγεθος αποτελέσματος = (2n + 1).
+    // 3. local_C: Πίνακας για τα μερικά αποτελέσματα.
+    // Το γινόμενο πολυωνύμων βαθμού n έχει βαθμό 2n, άρα μέγεθος 2n+1.
     int res_size = 2 * n + 1;
-    int *local_C = (int*) calloc(res_size, sizeof(int)); // calloc = γέμισμα με 0
+    // Χρήση calloc για αρχικοποίηση με 0, ώστε να κάνουμε += αργότερα.
+    int *local_C = (int*) calloc(res_size, sizeof(int)); 
 
-    // --- Global Arrays (ΜΟΝΟ στον Master) ---
-    int *A = NULL;       // Ο αρχικός πίνακας A
-    int *final_C = NULL; // Ο τελικός πίνακας αποτελεσμάτων
+    // Δείκτες για τους Global πίνακες (χρήση μόνο από τον Master)
+    int *A = NULL;       
+    int *final_C = NULL; 
     
+    // Ο Master δεσμεύει και αρχικοποιεί τα δεδομένα
     if (my_rank == 0) {
         A = (int*) malloc(N * sizeof(int));
         final_C = (int*) malloc(res_size * sizeof(int));
 
-        // Γέμισμα με τυχαία δεδομένα
         printf("Master: Initializing polynomials (Degree n=%d, Coeffs N=%d)...\n", n, N);
-        srand(42); // Σταθερό seed για να βγάζει τα ίδια κάθε φορά (debugging)
+        srand(42); // Seed για επαναληψιμότητα των πειραμάτων
         for (int i = 0; i < N; i++) {
-            A[i] = (rand() % 10) + 1; // Τιμές 1-10
-            B[i] = (rand() % 10) + 1; // Γεμίζουμε το B του Master απευθείας
+            A[i] = (rand() % 10) + 1; 
+            B[i] = (rand() % 10) + 1; 
         }
     }
 
-    // --- ΤΕΛΟΣ ΚΟΜΜΑΤΙΟΥ 1 ---
-    // Εδώ σταματάμε για τώρα.
-    // Δεν έχουμε κάνει ακόμη καμία επικοινωνία.
-
-
-    // --- ΚΟΜΜΑΤΙ 2: Επικοινωνία & Χρονομέτρηση ---
+    /* --- Φάση Επικοινωνίας (Distribution) --- */
     
     double t_start, t_comm_end;
 
-    // 1. Συγχρονισμός: Περιμένουμε όλους να φτάσουν εδώ πριν ξεκινήσει το χρονόμετρο
+    // Barrier για να ξεκινήσει η χρονομέτρηση ταυτόχρονα
     MPI_Barrier(MPI_COMM_WORLD);
     GET_TIME(t_start);
 
-    // 2. Scatter: Μοιράζουμε το A
-    // Ορίσματα: 
-    // (SourceBuf, SendCount/Process, Type, DestBuf, RecvCount, Type, Root, Comm)
-    // Προσοχή: Το A είναι NULL στους Workers, αλλά το MPI το αγνοεί εκεί.
+    // Διανομή του πίνακα A: Κάθε διεργασία παίρνει local_n στοιχεία
     MPI_Scatter(A, local_n, MPI_INT, 
                 local_A, local_n, MPI_INT, 
                 0, MPI_COMM_WORLD);
 
-    // 3. Broadcast: Στέλνουμε το B σε όλους
-    // Ορίσματα: (Buffer, Count, Type, Root, Comm)
-    // Εδώ στέλνουμε ΟΛΟΚΛΗΡΟ το N, όχι local_n!
+    // Broadcast του πίνακα B: Όλες οι διεργασίες λαμβάνουν όλο το B
     MPI_Bcast(B, N, MPI_INT, 0, MPI_COMM_WORLD);
 
-    // Σταματάμε το χρονόμετρο επικοινωνίας
-    MPI_Barrier(MPI_COMM_WORLD); // Προαιρετικό, για ακρίβεια μέτρησης
+    MPI_Barrier(MPI_COMM_WORLD); 
     GET_TIME(t_comm_end);
 
-    // Debugging Print (Για να δούμε ότι δούλεψε)
-    // Τυπώνουμε το πρώτο στοιχείο που έλαβε ο καθένας για επιβεβαίωση
-    printf("Rank %d received local_A[0]=%d and B[0]=%d\n", 
-            my_rank, local_A[0], B[0]);
+    // Debug print για επιβεβαίωση λήψης δεδομένων
+    printf("Rank %d received local_A[0]=%d and B[0]=%d\n", my_rank, local_A[0], B[0]);
     
-    // --- ΤΕΛΟΣ ΚΟΜΜΑΤΙΟΥ 2 ---
 
-
-// --- ΚΟΜΜΑΤΙ 3: Υπολογισμός (Convolution) ---
+    /* --- Φάση Υπολογισμού (Convolution Kernel) --- */
     
     double t_calc_end;
     
-    // 1. Υπολογισμός του Global Offset
-    // Π.χ. Αν local_n=3, ο Rank 1 ξεκινάει από το δείκτη 3 του αρχικού A.
+    // Υπολογισμός του global index από όπου ξεκινάει το local_A της διεργασίας
     int global_offset = my_rank * local_n;
 
-    // 2. Ο Κύριος Βρόχος Υπολογισμού
-    // Για κάθε στοιχείο του ΔΙΚΟΥ ΜΟΥ κομματιού του A...
+    // Διπλός βρόχος για τον υπολογισμό του γινομένου (Συνέλιξη)
     for (int i = 0; i < local_n; i++) {
-        
-        // ...το πολλαπλασιάζω με ΟΛΑ τα στοιχεία του B
         for (int j = 0; j < N; j++) {
             
-            // Ποια είναι η πραγματική θέση του A;
+            // Ο τρέχων όρος του A αντιστοιχεί στη δύναμη x^(global_offset + i)
             int global_i = global_offset + i;
             
-            // Ποια θέση του αποτελέσματος C επηρεάζουμε; (Βαθμός A + Βαθμός B)
+            // Οι δυνάμεις προστίθενται στον πολλαπλασιασμό: x^a * x^b = x^(a+b)
             int c_index = global_i + j;
             
-            // Προσθήκη στο μερικό άθροισμα
+            // Προσθήκη στο αντίστοιχο κελί του αποτελέσματος
             local_C[c_index] += local_A[i] * B[j];
         }
     }
 
-    // 3. Χρονομέτρηση
-    MPI_Barrier(MPI_COMM_WORLD); // Βεβαιωνόμαστε ότι όλοι τελείωσαν τους υπολογισμούς
+    MPI_Barrier(MPI_COMM_WORLD); 
     GET_TIME(t_calc_end);
 
-    // Debugging Print (Για να δούμε ότι κάτι υπολογίστηκε)
-    // Τυπώνουμε ένα τυχαίο στοιχείο του αποτελέσματος για έλεγχο
-    // Π.χ. τη θέση [global_offset], που σίγουρα έχει τιμή.
+    // Debug print για έλεγχο υπολογισμού
     printf("Rank %d calculated partial C[%d] = %d\n", 
            my_rank, global_offset, local_C[global_offset]);
            
-    // --- ΤΕΛΟΣ ΚΟΜΜΑΤΙΟΥ 3 ---
 
-
-    
-// --- ΚΟΜΜΑΤΙ 4: Συλλογή & Τερματισμός ---
+    /* --- Φάση Συλλογής & Αποτελέσματα (Reduction) --- */
 
     double t_reduce_end;
 
-    // 1. MPI Reduce: Μαζεύουμε όλα τα local_C στο final_C του Master
-    // Προσοχή: Το final_C υπάρχει μόνο στον Rank 0. Στους άλλους βάζουμε NULL (ή τίποτα).
+    // Συγκέντρωση (Reduction) των μερικών πινάκων local_C στον final_C του Master.
+    // Χρησιμοποιούμε MPI_SUM για να αθροίσουμε τους συντελεστές που αντιστοιχούν στην ίδια δύναμη.
     MPI_Reduce(local_C, final_C, res_size, MPI_INT, MPI_SUM, 0, MPI_COMM_WORLD);
 
-    // Σταματάμε το χρονόμετρο για το Reduce
     GET_TIME(t_reduce_end);
 
-    // 2. Εκτύπωση Αποτελεσμάτων (ΜΟΝΟ ο Master)
+    // Εκτύπωση αποτελεσμάτων από τον Master
     if (my_rank == 0) {
         printf("\n--- RESULTS ---\n");
         printf("Polynomial Degree n: %d (Coeffs N=%d)\n", n, N);
@@ -166,7 +142,7 @@ int main(int argc, char* argv[]) {
         printf("(iv)  Total Parallel Time:       %e sec\n", t_reduce_end - t_start);
         printf("--------------------------------------\n");
 
-        // Προαιρετικά: Εκτύπωση αποτελέσματος για μικρά N
+        // Εκτύπωση διανύσματος μόνο αν είναι μικρό (για επαλήθευση)
         if (res_size <= 30) {
             printf("Final Result C (Degree 2n): \n");
             for (int i = 0; i < res_size; i++) {
@@ -176,7 +152,7 @@ int main(int argc, char* argv[]) {
         }
     }
 
-    // 3. Cleanup (Καθαρισμός Μνήμης)
+    // Αποδέσμευση μνήμης
     free(local_A);
     free(B);
     free(local_C);
@@ -186,6 +162,6 @@ int main(int argc, char* argv[]) {
         free(final_C);
     }
 
-MPI_Finalize();
+    MPI_Finalize();
     return 0;
 }
