@@ -1,0 +1,963 @@
+==================================================================
+ FINAL REPORT EXPERIMENTS (Ex 3.2)
+ Sizes: 10^3 to 10^4 | Iters: 1 to 20 | Sparsity: 0% to 99%
+ Date: Πεμ 15 Ιαν 2026 06:56:30 μμ EET
+==================================================================
+
+------------------------------------------------------------------
+>>> MATRIX SIZE N = 1024 <<<
+------------------------------------------------------------------
+
+   [Sparsity: 0.00 | Iterations: 1]
+   --- Processes: P=1 ---
+Master: Generating N=1024, Sparsity=0.00...
+
+=== RESULTS (N=1024, Sparsity=0.00, P=1, Iters=1) ===
+(i)   CSR Creation Time:      3.167796e-02 sec
+(ii)  CSR Comm Time (Distr):  3.149009e-02 sec
+(iii) CSR Calc Time:          1.450062e-03 sec
+(iv)  Total CSR Time:         6.461811e-02 sec
+(v)   Total Dense Time (MPI): 3.037095e-02 sec
+----------------------------------------------------
+Dense Comm Time:              2.902293e-02 sec
+Dense Calc Time:              1.348019e-03 sec
+   ---------------------
+   --- Processes: P=2 ---
+Master: Generating N=1024, Sparsity=0.00...
+
+=== RESULTS (N=1024, Sparsity=0.00, P=2, Iters=1) ===
+(i)   CSR Creation Time:      3.994012e-02 sec
+(ii)  CSR Comm Time (Distr):  1.599929e-01 sec
+(iii) CSR Calc Time:          7.770061e-04 sec
+(iv)  Total CSR Time:         2.007101e-01 sec
+(v)   Total Dense Time (MPI): 5.176067e-03 sec
+----------------------------------------------------
+Dense Comm Time:              4.499912e-03 sec
+Dense Calc Time:              6.761551e-04 sec
+   ---------------------
+   --- Processes: P=4 ---
+Master: Generating N=1024, Sparsity=0.00...
+
+=== RESULTS (N=1024, Sparsity=0.00, P=4, Iters=1) ===
+(i)   CSR Creation Time:      2.770019e-02 sec
+(ii)  CSR Comm Time (Distr):  2.639921e-01 sec
+(iii) CSR Calc Time:          3.200006e-02 sec
+(iv)  Total CSR Time:         3.236923e-01 sec
+(v)   Total Dense Time (MPI): 3.240700e-01 sec
+----------------------------------------------------
+Dense Comm Time:              2.920370e-01 sec
+Dense Calc Time:              3.203297e-02 sec
+   ---------------------
+   --- Processes: P=8 ---
+Master: Generating N=1024, Sparsity=0.00...
+
+=== RESULTS (N=1024, Sparsity=0.00, P=8, Iters=1) ===
+(i)   CSR Creation Time:      3.658199e-02 sec
+(ii)  CSR Comm Time (Distr):  2.539310e-01 sec
+(iii) CSR Calc Time:          8.000112e-02 sec
+(iv)  Total CSR Time:         3.705142e-01 sec
+(v)   Total Dense Time (MPI): 6.280220e-01 sec
+----------------------------------------------------
+Dense Comm Time:              5.560100e-01 sec
+Dense Calc Time:              7.201195e-02 sec
+   ---------------------
+   --- Processes: P=16 ---
+Master: Generating N=1024, Sparsity=0.00...
+
+=== RESULTS (N=1024, Sparsity=0.00, P=16, Iters=1) ===
+(i)   CSR Creation Time:      5.069923e-02 sec
+(ii)  CSR Comm Time (Distr):  1.919479e-01 sec
+(iii) CSR Calc Time:          4.592395e-02 sec
+(iv)  Total CSR Time:         2.885711e-01 sec
+(v)   Total Dense Time (MPI): 6.399400e-01 sec
+----------------------------------------------------
+Dense Comm Time:              5.559530e-01 sec
+Dense Calc Time:              8.398700e-02 sec
+   ---------------------
+   --- Processes: P=32 ---
+Master: Generating N=1024, Sparsity=0.00...
+
+=== RESULTS (N=1024, Sparsity=0.00, P=32, Iters=1) ===
+(i)   CSR Creation Time:      3.574204e-02 sec
+(ii)  CSR Comm Time (Distr):  1.839960e-01 sec
+(iii) CSR Calc Time:          1.000280e-01 sec
+(iv)  Total CSR Time:         3.197660e-01 sec
+(v)   Total Dense Time (MPI): 4.821267e-01 sec
+----------------------------------------------------
+Dense Comm Time:              4.341178e-01 sec
+Dense Calc Time:              4.800892e-02 sec
+   ---------------------
+
+   [Sparsity: 0.00 | Iterations: 20]
+   --- Processes: P=1 ---
+Master: Generating N=1024, Sparsity=0.00...
+
+=== RESULTS (N=1024, Sparsity=0.00, P=1, Iters=20) ===
+(i)   CSR Creation Time:      2.779603e-02 sec
+(ii)  CSR Comm Time (Distr):  2.357602e-02 sec
+(iii) CSR Calc Time:          8.096004e-02 sec
+(iv)  Total CSR Time:         1.323321e-01 sec
+(v)   Total Dense Time (MPI): 1.180949e-01 sec
+----------------------------------------------------
+Dense Comm Time:              5.030870e-03 sec
+Dense Calc Time:              1.130641e-01 sec
+   ---------------------
+   --- Processes: P=2 ---
+Master: Generating N=1024, Sparsity=0.00...
+
+=== RESULTS (N=1024, Sparsity=0.00, P=2, Iters=20) ===
+(i)   CSR Creation Time:      3.185606e-02 sec
+(ii)  CSR Comm Time (Distr):  1.600881e-01 sec
+(iii) CSR Calc Time:          1.308401e-01 sec
+(iv)  Total CSR Time:         3.227842e-01 sec
+(v)   Total Dense Time (MPI): 1.227489e-01 sec
+----------------------------------------------------
+Dense Comm Time:              4.608870e-03 sec
+Dense Calc Time:              1.181400e-01 sec
+   ---------------------
+   --- Processes: P=4 ---
+Master: Generating N=1024, Sparsity=0.00...
+
+=== RESULTS (N=1024, Sparsity=0.00, P=4, Iters=20) ===
+(i)   CSR Creation Time:      3.174710e-02 sec
+(ii)  CSR Comm Time (Distr):  6.462550e-01 sec
+(iii) CSR Calc Time:          4.762812e-01 sec
+(iv)  Total CSR Time:         1.154283e+00 sec
+(v)   Total Dense Time (MPI): 6.841440e-01 sec
+----------------------------------------------------
+Dense Comm Time:              2.001419e-01 sec
+Dense Calc Time:              4.840021e-01 sec
+   ---------------------
+   --- Processes: P=8 ---
+Master: Generating N=1024, Sparsity=0.00...
+
+=== RESULTS (N=1024, Sparsity=0.00, P=8, Iters=20) ===
+(i)   CSR Creation Time:      3.974390e-02 sec
+(ii)  CSR Comm Time (Distr):  2.440259e-01 sec
+(iii) CSR Calc Time:          7.481260e-01 sec
+(iv)  Total CSR Time:         1.031896e+00 sec
+(v)   Total Dense Time (MPI): 1.052009e+00 sec
+----------------------------------------------------
+Dense Comm Time:              3.800070e-01 sec
+Dense Calc Time:              6.720021e-01 sec
+   ---------------------
+   --- Processes: P=16 ---
+Master: Generating N=1024, Sparsity=0.00...
+
+=== RESULTS (N=1024, Sparsity=0.00, P=16, Iters=20) ===
+(i)   CSR Creation Time:      2.481699e-02 sec
+(ii)  CSR Comm Time (Distr):  1.515820e-01 sec
+(iii) CSR Calc Time:          3.361890e-01 sec
+(iv)  Total CSR Time:         5.125880e-01 sec
+(v)   Total Dense Time (MPI): 2.836769e-01 sec
+----------------------------------------------------
+Dense Comm Time:              1.411309e-01 sec
+Dense Calc Time:              1.425459e-01 sec
+   ---------------------
+   --- Processes: P=32 ---
+[mpiexec@linux23] Sending Ctrl-C to processes as requested
+[mpiexec@linux23] Press Ctrl-C again to force abort
+   ---------------------
+
+   [Sparsity: 0.50 | Iterations: 1]
+   --- Processes: P=1 ---
+Master: Generating N=1024, Sparsity=0.50...
+
+=== RESULTS (N=1024, Sparsity=0.50, P=1, Iters=1) ===
+(i)   CSR Creation Time:      2.136898e-02 sec
+(ii)  CSR Comm Time (Distr):  4.004955e-03 sec
+(iii) CSR Calc Time:          7.390976e-04 sec
+(iv)  Total CSR Time:         2.611303e-02 sec
+(v)   Total Dense Time (MPI): 1.870799e-02 sec
+----------------------------------------------------
+Dense Comm Time:              1.728392e-02 sec
+Dense Calc Time:              1.424074e-03 sec
+   ---------------------
+   --- Processes: P=2 ---
+Master: Generating N=1024, Sparsity=0.50...
+
+=== RESULTS (N=1024, Sparsity=0.50, P=2, Iters=1) ===
+(i)   CSR Creation Time:      6.931901e-02 sec
+(ii)  CSR Comm Time (Distr):  4.399941e-01 sec
+(iii) CSR Calc Time:          3.919387e-02 sec
+(iv)  Total CSR Time:         5.485070e-01 sec
+(v)   Total Dense Time (MPI): 2.366612e-01 sec
+----------------------------------------------------
+Dense Comm Time:              2.199461e-01 sec
+Dense Calc Time:              1.671505e-02 sec
+   ---------------------
+   --- Processes: P=4 ---
+Master: Generating N=1024, Sparsity=0.50...
+
+=== RESULTS (N=1024, Sparsity=0.50, P=4, Iters=1) ===
+(i)   CSR Creation Time:      4.112887e-02 sec
+(ii)  CSR Comm Time (Distr):  3.120899e-03 sec
+(iii) CSR Calc Time:          2.269745e-04 sec
+(iv)  Total CSR Time:         4.447675e-02 sec
+(v)   Total Dense Time (MPI): 1.312568e-01 sec
+----------------------------------------------------
+Dense Comm Time:              1.307800e-01 sec
+Dense Calc Time:              4.768372e-04 sec
+   ---------------------
+   --- Processes: P=8 ---
+Master: Generating N=1024, Sparsity=0.50...
+
+=== RESULTS (N=1024, Sparsity=0.50, P=8, Iters=1) ===
+(i)   CSR Creation Time:      5.327702e-02 sec
+(ii)  CSR Comm Time (Distr):  1.839950e-01 sec
+(iii) CSR Calc Time:          5.999899e-02 sec
+(iv)  Total CSR Time:         2.972710e-01 sec
+(v)   Total Dense Time (MPI): 4.440131e-01 sec
+----------------------------------------------------
+Dense Comm Time:              3.880091e-01 sec
+Dense Calc Time:              5.600405e-02 sec
+   ---------------------
+   --- Processes: P=16 ---
+Master: Generating N=1024, Sparsity=0.50...
+
+=== RESULTS (N=1024, Sparsity=0.50, P=16, Iters=1) ===
+(i)   CSR Creation Time:      5.702996e-02 sec
+(ii)  CSR Comm Time (Distr):  1.040080e-01 sec
+(iii) CSR Calc Time:          6.799197e-02 sec
+(iv)  Total CSR Time:         2.290299e-01 sec
+(v)   Total Dense Time (MPI): 2.560258e-01 sec
+----------------------------------------------------
+Dense Comm Time:              1.880069e-01 sec
+Dense Calc Time:              6.801891e-02 sec
+   ---------------------
+   --- Processes: P=32 ---
+Master: Generating N=1024, Sparsity=0.50...
+
+=== RESULTS (N=1024, Sparsity=0.50, P=32, Iters=1) ===
+(i)   CSR Creation Time:      6.102705e-02 sec
+(ii)  CSR Comm Time (Distr):  7.199097e-02 sec
+(iii) CSR Calc Time:          5.836201e-02 sec
+(iv)  Total CSR Time:         1.913800e-01 sec
+(v)   Total Dense Time (MPI): 2.661183e-01 sec
+----------------------------------------------------
+Dense Comm Time:              2.101002e-01 sec
+Dense Calc Time:              5.601811e-02 sec
+   ---------------------
+
+   [Sparsity: 0.50 | Iterations: 20]
+   --- Processes: P=1 ---
+Master: Generating N=1024, Sparsity=0.50...
+
+=== RESULTS (N=1024, Sparsity=0.50, P=1, Iters=20) ===
+(i)   CSR Creation Time:      6.930113e-02 sec
+(ii)  CSR Comm Time (Distr):  2.783298e-02 sec
+(iii) CSR Calc Time:          4.268694e-02 sec
+(iv)  Total CSR Time:         1.398211e-01 sec
+(v)   Total Dense Time (MPI): 1.088941e-01 sec
+----------------------------------------------------
+Dense Comm Time:              2.501512e-02 sec
+Dense Calc Time:              8.387899e-02 sec
+   ---------------------
+   --- Processes: P=2 ---
+Master: Generating N=1024, Sparsity=0.50...
+
+=== RESULTS (N=1024, Sparsity=0.50, P=2, Iters=20) ===
+(i)   CSR Creation Time:      3.717589e-02 sec
+(ii)  CSR Comm Time (Distr):  6.269932e-03 sec
+(iii) CSR Calc Time:          7.558203e-02 sec
+(iv)  Total CSR Time:         1.190279e-01 sec
+(v)   Total Dense Time (MPI): 1.659441e-01 sec
+----------------------------------------------------
+Dense Comm Time:              3.252411e-02 sec
+Dense Calc Time:              1.334200e-01 sec
+   ---------------------
+   --- Processes: P=4 ---
+Master: Generating N=1024, Sparsity=0.50...
+
+=== RESULTS (N=1024, Sparsity=0.50, P=4, Iters=20) ===
+(i)   CSR Creation Time:      3.709102e-02 sec
+(ii)  CSR Comm Time (Distr):  4.359951e-01 sec
+(iii) CSR Calc Time:          5.240178e-01 sec
+(iv)  Total CSR Time:         9.971039e-01 sec
+(v)   Total Dense Time (MPI): 6.040211e-01 sec
+----------------------------------------------------
+Dense Comm Time:              7.201505e-02 sec
+Dense Calc Time:              5.320060e-01 sec
+   ---------------------
+   --- Processes: P=8 ---
+Master: Generating N=1024, Sparsity=0.50...
+
+=== RESULTS (N=1024, Sparsity=0.50, P=8, Iters=20) ===
+(i)   CSR Creation Time:      8.647394e-02 sec
+(ii)  CSR Comm Time (Distr):  2.479811e-01 sec
+(iii) CSR Calc Time:          6.133389e-01 sec
+(iv)  Total CSR Time:         9.477940e-01 sec
+(v)   Total Dense Time (MPI): 8.768830e-01 sec
+----------------------------------------------------
+Dense Comm Time:              4.048691e-01 sec
+Dense Calc Time:              4.720140e-01 sec
+   ---------------------
+   --- Processes: P=16 ---
+Master: Generating N=1024, Sparsity=0.50...
+
+=== RESULTS (N=1024, Sparsity=0.50, P=16, Iters=20) ===
+(i)   CSR Creation Time:      7.182813e-02 sec
+(ii)  CSR Comm Time (Distr):  1.061110e-01 sec
+(iii) CSR Calc Time:          7.280059e-01 sec
+(iv)  Total CSR Time:         9.059451e-01 sec
+(v)   Total Dense Time (MPI): 9.040079e-01 sec
+----------------------------------------------------
+Dense Comm Time:              2.559969e-01 sec
+Dense Calc Time:              6.480110e-01 sec
+   ---------------------
+   --- Processes: P=32 ---
+Master: Generating N=1024, Sparsity=0.50...
+
+=== RESULTS (N=1024, Sparsity=0.50, P=32, Iters=20) ===
+(i)   CSR Creation Time:      6.107402e-02 sec
+(ii)  CSR Comm Time (Distr):  1.520190e-01 sec
+(iii) CSR Calc Time:          6.480160e-01 sec
+(iv)  Total CSR Time:         8.611090e-01 sec
+(v)   Total Dense Time (MPI): 8.840110e-01 sec
+----------------------------------------------------
+Dense Comm Time:              2.320240e-01 sec
+Dense Calc Time:              6.519871e-01 sec
+   ---------------------
+
+   [Sparsity: 0.99 | Iterations: 1]
+   --- Processes: P=1 ---
+Master: Generating N=1024, Sparsity=0.99...
+
+=== RESULTS (N=1024, Sparsity=0.99, P=1, Iters=1) ===
+(i)   CSR Creation Time:      1.850295e-02 sec
+(ii)  CSR Comm Time (Distr):  8.893013e-05 sec
+(iii) CSR Calc Time:          1.716614e-05 sec
+(iv)  Total CSR Time:         1.860905e-02 sec
+(v)   Total Dense Time (MPI): 2.243614e-02 sec
+----------------------------------------------------
+Dense Comm Time:              2.105212e-02 sec
+Dense Calc Time:              1.384020e-03 sec
+   ---------------------
+   --- Processes: P=2 ---
+Master: Generating N=1024, Sparsity=0.99...
+
+=== RESULTS (N=1024, Sparsity=0.99, P=2, Iters=1) ===
+(i)   CSR Creation Time:      2.238107e-02 sec
+(ii)  CSR Comm Time (Distr):  2.000284e-02 sec
+(iii) CSR Calc Time:          3.601599e-02 sec
+(iv)  Total CSR Time:         7.839990e-02 sec
+(v)   Total Dense Time (MPI): 3.676391e-02 sec
+----------------------------------------------------
+Dense Comm Time:              1.675892e-02 sec
+Dense Calc Time:              2.000499e-02 sec
+   ---------------------
+   --- Processes: P=4 ---
+Master: Generating N=1024, Sparsity=0.99...
+
+=== RESULTS (N=1024, Sparsity=0.99, P=4, Iters=1) ===
+(i)   CSR Creation Time:      1.446700e-02 sec
+(ii)  CSR Comm Time (Distr):  3.999496e-02 sec
+(iii) CSR Calc Time:          5.200696e-02 sec
+(iv)  Total CSR Time:         1.064689e-01 sec
+(v)   Total Dense Time (MPI): 3.547368e-01 sec
+----------------------------------------------------
+Dense Comm Time:              3.027258e-01 sec
+Dense Calc Time:              5.201101e-02 sec
+   ---------------------
+   --- Processes: P=8 ---
+Master: Generating N=1024, Sparsity=0.99...
+
+=== RESULTS (N=1024, Sparsity=0.99, P=8, Iters=1) ===
+(i)   CSR Creation Time:      2.380848e-03 sec
+(ii)  CSR Comm Time (Distr):  5.598402e-02 sec
+(iii) CSR Calc Time:          4.018307e-02 sec
+(iv)  Total CSR Time:         9.854794e-02 sec
+(v)   Total Dense Time (MPI): 4.637251e-01 sec
+----------------------------------------------------
+Dense Comm Time:              3.559859e-01 sec
+Dense Calc Time:              1.077392e-01 sec
+   ---------------------
+   --- Processes: P=16 ---
+Master: Generating N=1024, Sparsity=0.99...
+
+=== RESULTS (N=1024, Sparsity=0.99, P=16, Iters=1) ===
+(i)   CSR Creation Time:      2.331972e-03 sec
+(ii)  CSR Comm Time (Distr):  1.121860e-01 sec
+(iii) CSR Calc Time:          1.000190e-01 sec
+(iv)  Total CSR Time:         2.145369e-01 sec
+(v)   Total Dense Time (MPI): 4.137521e-01 sec
+----------------------------------------------------
+Dense Comm Time:              3.402309e-01 sec
+Dense Calc Time:              7.352114e-02 sec
+   ---------------------
+   --- Processes: P=32 ---
+Master: Generating N=1024, Sparsity=0.99...
+
+=== RESULTS (N=1024, Sparsity=0.99, P=32, Iters=1) ===
+(i)   CSR Creation Time:      2.239108e-02 sec
+(ii)  CSR Comm Time (Distr):  9.583306e-02 sec
+(iii) CSR Calc Time:          9.263611e-02 sec
+(iv)  Total CSR Time:         2.108603e-01 sec
+(v)   Total Dense Time (MPI): 3.920000e-01 sec
+----------------------------------------------------
+Dense Comm Time:              3.400071e-01 sec
+Dense Calc Time:              5.199289e-02 sec
+   ---------------------
+
+   [Sparsity: 0.99 | Iterations: 20]
+   --- Processes: P=1 ---
+Master: Generating N=1024, Sparsity=0.99...
+
+=== RESULTS (N=1024, Sparsity=0.99, P=1, Iters=20) ===
+(i)   CSR Creation Time:      1.850390e-02 sec
+(ii)  CSR Comm Time (Distr):  9.012222e-05 sec
+(iii) CSR Calc Time:          2.501011e-04 sec
+(iv)  Total CSR Time:         1.884413e-02 sec
+(v)   Total Dense Time (MPI): 1.774709e-01 sec
+----------------------------------------------------
+Dense Comm Time:              2.517891e-02 sec
+Dense Calc Time:              1.522920e-01 sec
+   ---------------------
+   --- Processes: P=2 ---
+Master: Generating N=1024, Sparsity=0.99...
+
+=== RESULTS (N=1024, Sparsity=0.99, P=2, Iters=20) ===
+(i)   CSR Creation Time:      1.880217e-02 sec
+(ii)  CSR Comm Time (Distr):  1.499653e-04 sec
+(iii) CSR Calc Time:          1.599789e-04 sec
+(iv)  Total CSR Time:         1.911211e-02 sec
+(v)   Total Dense Time (MPI): 3.213532e-01 sec
+----------------------------------------------------
+Dense Comm Time:              2.137709e-02 sec
+Dense Calc Time:              2.999761e-01 sec
+   ---------------------
+   --- Processes: P=4 ---
+Master: Generating N=1024, Sparsity=0.99...
+
+=== RESULTS (N=1024, Sparsity=0.99, P=4, Iters=20) ===
+(i)   CSR Creation Time:      2.266288e-02 sec
+(ii)  CSR Comm Time (Distr):  2.400017e-02 sec
+(iii) CSR Calc Time:          4.800088e-01 sec
+(iv)  Total CSR Time:         5.266719e-01 sec
+(v)   Total Dense Time (MPI): 9.879999e-01 sec
+----------------------------------------------------
+Dense Comm Time:              4.919989e-01 sec
+Dense Calc Time:              4.960010e-01 sec
+   ---------------------
+   --- Processes: P=8 ---
+Master: Generating N=1024, Sparsity=0.99...
+
+=== RESULTS (N=1024, Sparsity=0.99, P=8, Iters=20) ===
+(i)   CSR Creation Time:      1.884413e-02 sec
+(ii)  CSR Comm Time (Distr):  1.159742e-01 sec
+(iii) CSR Calc Time:          6.840281e-01 sec
+(iv)  Total CSR Time:         8.188465e-01 sec
+(v)   Total Dense Time (MPI): 1.204027e+00 sec
+----------------------------------------------------
+Dense Comm Time:              5.320039e-01 sec
+Dense Calc Time:              6.720228e-01 sec
+   ---------------------
+   --- Processes: P=16 ---
+Master: Generating N=1024, Sparsity=0.99...
+
+=== RESULTS (N=1024, Sparsity=0.99, P=16, Iters=20) ===
+(i)   CSR Creation Time:      2.552032e-03 sec
+(ii)  CSR Comm Time (Distr):  5.204010e-02 sec
+(iii) CSR Calc Time:          7.226441e-01 sec
+(iv)  Total CSR Time:         7.772362e-01 sec
+(v)   Total Dense Time (MPI): 9.480102e-01 sec
+----------------------------------------------------
+Dense Comm Time:              2.640162e-01 sec
+Dense Calc Time:              6.839941e-01 sec
+   ---------------------
+   --- Processes: P=32 ---
+Master: Generating N=1024, Sparsity=0.99...
+
+=== RESULTS (N=1024, Sparsity=0.99, P=32, Iters=20) ===
+(i)   CSR Creation Time:      2.267408e-02 sec
+(ii)  CSR Comm Time (Distr):  5.852509e-02 sec
+(iii) CSR Calc Time:          6.175120e-01 sec
+(iv)  Total CSR Time:         6.987112e-01 sec
+(v)   Total Dense Time (MPI): 1.144165e+00 sec
+----------------------------------------------------
+Dense Comm Time:              4.082010e-01 sec
+Dense Calc Time:              7.359638e-01 sec
+   ---------------------
+------------------------------------------------------------------
+>>> MATRIX SIZE N = 10240 <<<
+------------------------------------------------------------------
+
+   [Sparsity: 0.00 | Iterations: 1]
+   --- Processes: P=1 ---
+Master: Generating N=10240, Sparsity=0.00...
+
+=== RESULTS (N=10240, Sparsity=0.00, P=1, Iters=1) ===
+(i)   CSR Creation Time:      2.460513e+00 sec
+(ii)  CSR Comm Time (Distr):  2.820482e+00 sec
+(iii) CSR Calc Time:          6.479950e-01 sec
+(iv)  Total CSR Time:         5.928990e+00 sec
+(v)   Total Dense Time (MPI): 2.435183e+00 sec
+----------------------------------------------------
+Dense Comm Time:              1.904585e+00 sec
+Dense Calc Time:              5.305979e-01 sec
+   ---------------------
+   --- Processes: P=2 ---
+Master: Generating N=10240, Sparsity=0.00...
+
+=== RESULTS (N=10240, Sparsity=0.00, P=2, Iters=1) ===
+(i)   CSR Creation Time:      3.119582e+00 sec
+(ii)  CSR Comm Time (Distr):  5.506440e+00 sec
+(iii) CSR Calc Time:          3.335621e-01 sec
+(iv)  Total CSR Time:         8.959584e+00 sec
+(v)   Total Dense Time (MPI): 5.450138e+00 sec
+----------------------------------------------------
+Dense Comm Time:              5.226129e+00 sec
+Dense Calc Time:              2.240090e-01 sec
+   ---------------------
+   --- Processes: P=4 ---
+Master: Generating N=10240, Sparsity=0.00...
+
+=== RESULTS (N=10240, Sparsity=0.00, P=4, Iters=1) ===
+(i)   CSR Creation Time:      3.820790e+00 sec
+(ii)  CSR Comm Time (Distr):  1.334799e+01 sec
+(iii) CSR Calc Time:          1.640821e-01 sec
+(iv)  Total CSR Time:         1.733286e+01 sec
+(v)   Total Dense Time (MPI): 7.971337e+00 sec
+----------------------------------------------------
+Dense Comm Time:              7.755336e+00 sec
+Dense Calc Time:              2.160010e-01 sec
+   ---------------------
+   --- Processes: P=8 ---
+Master: Generating N=10240, Sparsity=0.00...
+
+=== RESULTS (N=10240, Sparsity=0.00, P=8, Iters=1) ===
+(i)   CSR Creation Time:      3.647239e+00 sec
+(ii)  CSR Comm Time (Distr):  1.241600e+01 sec
+(iii) CSR Calc Time:          1.639860e-01 sec
+(iv)  Total CSR Time:         1.622722e+01 sec
+(v)   Total Dense Time (MPI): 2.992661e+01 sec
+----------------------------------------------------
+Dense Comm Time:              2.978660e+01 sec
+Dense Calc Time:              1.400120e-01 sec
+   ---------------------
+   --- Processes: P=16 ---
+Master: Generating N=10240, Sparsity=0.00...
+
+=== RESULTS (N=10240, Sparsity=0.00, P=16, Iters=1) ===
+(i)   CSR Creation Time:      3.492847e+00 sec
+(ii)  CSR Comm Time (Distr):  2.424608e+01 sec
+(iii) CSR Calc Time:          1.399839e-01 sec
+(iv)  Total CSR Time:         2.787891e+01 sec
+(v)   Total Dense Time (MPI): 2.342003e+01 sec
+----------------------------------------------------
+Dense Comm Time:              2.332003e+01 sec
+Dense Calc Time:              9.999990e-02 sec
+   ---------------------
+   --- Processes: P=32 ---
+Master: Generating N=10240, Sparsity=0.00...
+
+=== RESULTS (N=10240, Sparsity=0.00, P=32, Iters=1) ===
+(i)   CSR Creation Time:      3.378800e+00 sec
+(ii)  CSR Comm Time (Distr):  1.418807e+01 sec
+(iii) CSR Calc Time:          1.120191e-01 sec
+(iv)  Total CSR Time:         1.767889e+01 sec
+(v)   Total Dense Time (MPI): 1.693822e+01 sec
+----------------------------------------------------
+Dense Comm Time:              1.684721e+01 sec
+Dense Calc Time:              9.101295e-02 sec
+   ---------------------
+
+   [Sparsity: 0.00 | Iterations: 20]
+   --- Processes: P=1 ---
+Master: Generating N=10240, Sparsity=0.00...
+
+=== RESULTS (N=10240, Sparsity=0.00, P=1, Iters=20) ===
+(i)   CSR Creation Time:      2.425509e+00 sec
+(ii)  CSR Comm Time (Distr):  1.902795e+00 sec
+(iii) CSR Calc Time:          9.390940e+00 sec
+(iv)  Total CSR Time:         1.371924e+01 sec
+(v)   Total Dense Time (MPI): 5.089715e+00 sec
+----------------------------------------------------
+Dense Comm Time:              1.267658e+00 sec
+Dense Calc Time:              3.822057e+00 sec
+   ---------------------
+   --- Processes: P=2 ---
+Master: Generating N=10240, Sparsity=0.00...
+
+=== RESULTS (N=10240, Sparsity=0.00, P=2, Iters=20) ===
+(i)   CSR Creation Time:      2.893375e+00 sec
+(ii)  CSR Comm Time (Distr):  5.676163e+00 sec
+(iii) CSR Calc Time:          5.002860e+00 sec
+(iv)  Total CSR Time:         1.357240e+01 sec
+(v)   Total Dense Time (MPI): 8.020020e+00 sec
+----------------------------------------------------
+Dense Comm Time:              2.552664e+00 sec
+Dense Calc Time:              5.467356e+00 sec
+   ---------------------
+   --- Processes: P=4 ---
+Master: Generating N=10240, Sparsity=0.00...
+
+=== RESULTS (N=10240, Sparsity=0.00, P=4, Iters=20) ===
+(i)   CSR Creation Time:      3.119926e+00 sec
+(ii)  CSR Comm Time (Distr):  1.018800e+01 sec
+(iii) CSR Calc Time:          3.599995e+00 sec
+(iv)  Total CSR Time:         1.690792e+01 sec
+(v)   Total Dense Time (MPI): 9.004433e+00 sec
+----------------------------------------------------
+Dense Comm Time:              5.776407e+00 sec
+Dense Calc Time:              3.228026e+00 sec
+   ---------------------
+   --- Processes: P=8 ---
+Master: Generating N=10240, Sparsity=0.00...
+
+=== RESULTS (N=10240, Sparsity=0.00, P=8, Iters=20) ===
+(i)   CSR Creation Time:      3.548492e+00 sec
+(ii)  CSR Comm Time (Distr):  1.067198e+01 sec
+(iii) CSR Calc Time:          2.047967e+00 sec
+(iv)  Total CSR Time:         1.626844e+01 sec
+(v)   Total Dense Time (MPI): 1.889619e+01 sec
+----------------------------------------------------
+Dense Comm Time:              1.682047e+01 sec
+Dense Calc Time:              2.075718e+00 sec
+   ---------------------
+   --- Processes: P=16 ---
+Master: Generating N=10240, Sparsity=0.00...
+
+=== RESULTS (N=10240, Sparsity=0.00, P=16, Iters=20) ===
+(i)   CSR Creation Time:      3.379978e+00 sec
+(ii)  CSR Comm Time (Distr):  1.499966e+01 sec
+(iii) CSR Calc Time:          1.267987e+00 sec
+(iv)  Total CSR Time:         1.964763e+01 sec
+(v)   Total Dense Time (MPI): 1.553998e+01 sec
+----------------------------------------------------
+Dense Comm Time:              1.430400e+01 sec
+Dense Calc Time:              1.235982e+00 sec
+   ---------------------
+   --- Processes: P=32 ---
+Master: Generating N=10240, Sparsity=0.00...
+
+=== RESULTS (N=10240, Sparsity=0.00, P=32, Iters=20) ===
+(i)   CSR Creation Time:      3.880151e+00 sec
+(ii)  CSR Comm Time (Distr):  1.338002e+01 sec
+(iii) CSR Calc Time:          9.240170e-01 sec
+(iv)  Total CSR Time:         1.818419e+01 sec
+(v)   Total Dense Time (MPI): 1.205989e+01 sec
+----------------------------------------------------
+Dense Comm Time:              1.100387e+01 sec
+Dense Calc Time:              1.056027e+00 sec
+   ---------------------
+
+   [Sparsity: 0.50 | Iterations: 1]
+   --- Processes: P=1 ---
+Master: Generating N=10240, Sparsity=0.50...
+
+=== RESULTS (N=10240, Sparsity=0.50, P=1, Iters=1) ===
+(i)   CSR Creation Time:      4.562724e+00 sec
+(ii)  CSR Comm Time (Distr):  6.111228e-01 sec
+(iii) CSR Calc Time:          1.405101e-01 sec
+(iv)  Total CSR Time:         5.314357e+00 sec
+(v)   Total Dense Time (MPI): 1.046855e+00 sec
+----------------------------------------------------
+Dense Comm Time:              7.783232e-01 sec
+Dense Calc Time:              2.685320e-01 sec
+   ---------------------
+   --- Processes: P=2 ---
+Master: Generating N=10240, Sparsity=0.50...
+
+=== RESULTS (N=10240, Sparsity=0.50, P=2, Iters=1) ===
+(i)   CSR Creation Time:      4.875171e+00 sec
+(ii)  CSR Comm Time (Distr):  4.226700e+00 sec
+(iii) CSR Calc Time:          1.379580e-01 sec
+(iv)  Total CSR Time:         9.239829e+00 sec
+(v)   Total Dense Time (MPI): 4.869241e+00 sec
+----------------------------------------------------
+Dense Comm Time:              4.571910e+00 sec
+Dense Calc Time:              2.973311e-01 sec
+   ---------------------
+   --- Processes: P=4 ---
+Master: Generating N=10240, Sparsity=0.50...
+
+=== RESULTS (N=10240, Sparsity=0.50, P=4, Iters=1) ===
+(i)   CSR Creation Time:      4.359571e+00 sec
+(ii)  CSR Comm Time (Distr):  4.063796e+00 sec
+(iii) CSR Calc Time:          1.440270e-01 sec
+(iv)  Total CSR Time:         8.567394e+00 sec
+(v)   Total Dense Time (MPI): 9.452714e+00 sec
+----------------------------------------------------
+Dense Comm Time:              9.212193e+00 sec
+Dense Calc Time:              2.405210e-01 sec
+   ---------------------
+   --- Processes: P=8 ---
+Master: Generating N=10240, Sparsity=0.50...
+
+=== RESULTS (N=10240, Sparsity=0.50, P=8, Iters=1) ===
+(i)   CSR Creation Time:      5.301429e+00 sec
+(ii)  CSR Comm Time (Distr):  1.230400e+01 sec
+(iii) CSR Calc Time:          1.439581e-01 sec
+(iv)  Total CSR Time:         1.774939e+01 sec
+(v)   Total Dense Time (MPI): 1.639485e+01 sec
+----------------------------------------------------
+Dense Comm Time:              1.627253e+01 sec
+Dense Calc Time:              1.223202e-01 sec
+   ---------------------
+   --- Processes: P=16 ---
+Master: Generating N=10240, Sparsity=0.50...
+
+=== RESULTS (N=10240, Sparsity=0.50, P=16, Iters=1) ===
+(i)   CSR Creation Time:      5.129660e+00 sec
+(ii)  CSR Comm Time (Distr):  6.060019e+00 sec
+(iii) CSR Calc Time:          6.660414e-02 sec
+(iv)  Total CSR Time:         1.125628e+01 sec
+(v)   Total Dense Time (MPI): 1.837579e+01 sec
+----------------------------------------------------
+Dense Comm Time:              1.823672e+01 sec
+Dense Calc Time:              1.390691e-01 sec
+   ---------------------
+   --- Processes: P=32 ---
+Master: Generating N=10240, Sparsity=0.50...
+
+=== RESULTS (N=10240, Sparsity=0.50, P=32, Iters=1) ===
+(i)   CSR Creation Time:      5.485683e+00 sec
+(ii)  CSR Comm Time (Distr):  8.184010e+00 sec
+(iii) CSR Calc Time:          9.198594e-02 sec
+(iv)  Total CSR Time:         1.376168e+01 sec
+(v)   Total Dense Time (MPI): 2.613040e+01 sec
+----------------------------------------------------
+Dense Comm Time:              2.604724e+01 sec
+Dense Calc Time:              8.315802e-02 sec
+   ---------------------
+
+   [Sparsity: 0.50 | Iterations: 20]
+   --- Processes: P=1 ---
+Master: Generating N=10240, Sparsity=0.50...
+
+=== RESULTS (N=10240, Sparsity=0.50, P=1, Iters=20) ===
+(i)   CSR Creation Time:      4.461534e+00 sec
+(ii)  CSR Comm Time (Distr):  1.126634e+00 sec
+(iii) CSR Calc Time:          5.558220e+00 sec
+(iv)  Total CSR Time:         1.114639e+01 sec
+(v)   Total Dense Time (MPI): 1.186724e+01 sec
+----------------------------------------------------
+Dense Comm Time:              1.882547e+00 sec
+Dense Calc Time:              9.984696e+00 sec
+   ---------------------
+   --- Processes: P=2 ---
+Master: Generating N=10240, Sparsity=0.50...
+
+=== RESULTS (N=10240, Sparsity=0.50, P=2, Iters=20) ===
+(i)   CSR Creation Time:      4.371266e+00 sec
+(ii)  CSR Comm Time (Distr):  3.437292e+00 sec
+(iii) CSR Calc Time:          2.828021e+00 sec
+(iv)  Total CSR Time:         1.063658e+01 sec
+(v)   Total Dense Time (MPI): 1.490047e+01 sec
+----------------------------------------------------
+Dense Comm Time:              9.680455e+00 sec
+Dense Calc Time:              5.220010e+00 sec
+   ---------------------
+   --- Processes: P=4 ---
+Master: Generating N=10240, Sparsity=0.50...
+
+=== RESULTS (N=10240, Sparsity=0.50, P=4, Iters=20) ===
+(i)   CSR Creation Time:      5.900182e+00 sec
+(ii)  CSR Comm Time (Distr):  3.722289e+00 sec
+(iii) CSR Calc Time:          2.112030e+00 sec
+(iv)  Total CSR Time:         1.173450e+01 sec
+(v)   Total Dense Time (MPI): 1.139182e+01 sec
+----------------------------------------------------
+Dense Comm Time:              7.733955e+00 sec
+Dense Calc Time:              3.657862e+00 sec
+   ---------------------
+   --- Processes: P=8 ---
+Master: Generating N=10240, Sparsity=0.50...
+
+=== RESULTS (N=10240, Sparsity=0.50, P=8, Iters=20) ===
+(i)   CSR Creation Time:      5.557705e+00 sec
+(ii)  CSR Comm Time (Distr):  6.015974e+00 sec
+(iii) CSR Calc Time:          1.271992e+00 sec
+(iv)  Total CSR Time:         1.284567e+01 sec
+(v)   Total Dense Time (MPI): 1.318797e+01 sec
+----------------------------------------------------
+Dense Comm Time:              1.117998e+01 sec
+Dense Calc Time:              2.007981e+00 sec
+   ---------------------
+   --- Processes: P=16 ---
+Master: Generating N=10240, Sparsity=0.50...
+
+=== RESULTS (N=10240, Sparsity=0.50, P=16, Iters=20) ===
+(i)   CSR Creation Time:      5.463813e+00 sec
+(ii)  CSR Comm Time (Distr):  6.081013e+00 sec
+(iii) CSR Calc Time:          1.071993e+00 sec
+(iv)  Total CSR Time:         1.261682e+01 sec
+(v)   Total Dense Time (MPI): 2.371491e+01 sec
+----------------------------------------------------
+Dense Comm Time:              2.234691e+01 sec
+Dense Calc Time:              1.368004e+00 sec
+   ---------------------
+   --- Processes: P=32 ---
+Master: Generating N=10240, Sparsity=0.50...
+
+=== RESULTS (N=10240, Sparsity=0.50, P=32, Iters=20) ===
+(i)   CSR Creation Time:      5.744418e+00 sec
+(ii)  CSR Comm Time (Distr):  7.159876e+00 sec
+(iii) CSR Calc Time:          9.799809e-01 sec
+(iv)  Total CSR Time:         1.388427e+01 sec
+(v)   Total Dense Time (MPI): 2.120744e+01 sec
+----------------------------------------------------
+Dense Comm Time:              2.007761e+01 sec
+Dense Calc Time:              1.129839e+00 sec
+   ---------------------
+
+   [Sparsity: 0.99 | Iterations: 1]
+   --- Processes: P=1 ---
+Master: Generating N=10240, Sparsity=0.99...
+
+=== RESULTS (N=10240, Sparsity=0.99, P=1, Iters=1) ===
+(i)   CSR Creation Time:      9.197962e-01 sec
+(ii)  CSR Comm Time (Distr):  3.155398e-02 sec
+(iii) CSR Calc Time:          1.367092e-03 sec
+(iv)  Total CSR Time:         9.527173e-01 sec
+(v)   Total Dense Time (MPI): 2.099111e+00 sec
+----------------------------------------------------
+Dense Comm Time:              1.667307e+00 sec
+Dense Calc Time:              4.318039e-01 sec
+   ---------------------
+   --- Processes: P=2 ---
+Master: Generating N=10240, Sparsity=0.99...
+
+=== RESULTS (N=10240, Sparsity=0.99, P=2, Iters=1) ===
+(i)   CSR Creation Time:      9.547639e-01 sec
+(ii)  CSR Comm Time (Distr):  3.484106e-02 sec
+(iii) CSR Calc Time:          7.638931e-04 sec
+(iv)  Total CSR Time:         9.903688e-01 sec
+(v)   Total Dense Time (MPI): 5.556638e+00 sec
+----------------------------------------------------
+Dense Comm Time:              5.268611e+00 sec
+Dense Calc Time:              2.880270e-01 sec
+   ---------------------
+   --- Processes: P=4 ---
+Master: Generating N=10240, Sparsity=0.99...
+
+=== RESULTS (N=10240, Sparsity=0.99, P=4, Iters=1) ===
+(i)   CSR Creation Time:      1.057955e+00 sec
+(ii)  CSR Comm Time (Distr):  2.439961e-01 sec
+(iii) CSR Calc Time:          7.202005e-02 sec
+(iv)  Total CSR Time:         1.373971e+00 sec
+(v)   Total Dense Time (MPI): 7.388002e+00 sec
+----------------------------------------------------
+Dense Comm Time:              7.191993e+00 sec
+Dense Calc Time:              1.960089e-01 sec
+   ---------------------
+   --- Processes: P=8 ---
+Master: Generating N=10240, Sparsity=0.99...
+
+=== RESULTS (N=10240, Sparsity=0.99, P=8, Iters=1) ===
+(i)   CSR Creation Time:      8.568170e-01 sec
+(ii)  CSR Comm Time (Distr):  2.679918e-01 sec
+(iii) CSR Calc Time:          6.042099e-02 sec
+(iv)  Total CSR Time:         1.185230e+00 sec
+(v)   Total Dense Time (MPI): 7.618459e+00 sec
+----------------------------------------------------
+Dense Comm Time:              7.558641e+00 sec
+Dense Calc Time:              5.981803e-02 sec
+   ---------------------
+   --- Processes: P=16 ---
+Master: Generating N=10240, Sparsity=0.99...
+
+=== RESULTS (N=10240, Sparsity=0.99, P=16, Iters=1) ===
+(i)   CSR Creation Time:      6.970689e-01 sec
+(ii)  CSR Comm Time (Distr):  1.680090e-01 sec
+(iii) CSR Calc Time:          4.058814e-02 sec
+(iv)  Total CSR Time:         9.056661e-01 sec
+(v)   Total Dense Time (MPI): 8.556777e+00 sec
+----------------------------------------------------
+Dense Comm Time:              8.439999e+00 sec
+Dense Calc Time:              1.167779e-01 sec
+   ---------------------
+   --- Processes: P=32 ---
+Master: Generating N=10240, Sparsity=0.99...
+
+=== RESULTS (N=10240, Sparsity=0.99, P=32, Iters=1) ===
+(i)   CSR Creation Time:      8.324680e-01 sec
+(ii)  CSR Comm Time (Distr):  1.718199e-01 sec
+(iii) CSR Calc Time:          9.600806e-02 sec
+(iv)  Total CSR Time:         1.100296e+00 sec
+(v)   Total Dense Time (MPI): 1.790578e+01 sec
+----------------------------------------------------
+Dense Comm Time:              1.786830e+01 sec
+Dense Calc Time:              3.748107e-02 sec
+   ---------------------
+
+   [Sparsity: 0.99 | Iterations: 20]
+   --- Processes: P=1 ---
+Master: Generating N=10240, Sparsity=0.99...
+
+=== RESULTS (N=10240, Sparsity=0.99, P=1, Iters=20) ===
+(i)   CSR Creation Time:      5.265601e-01 sec
+(ii)  CSR Comm Time (Distr):  3.570795e-02 sec
+(iii) CSR Calc Time:          6.934381e-02 sec
+(iv)  Total CSR Time:         6.316118e-01 sec
+(v)   Total Dense Time (MPI): 8.993528e+00 sec
+----------------------------------------------------
+Dense Comm Time:              1.348710e+00 sec
+Dense Calc Time:              7.644818e+00 sec
+   ---------------------
+   --- Processes: P=2 ---
+Master: Generating N=10240, Sparsity=0.99...
+
+=== RESULTS (N=10240, Sparsity=0.99, P=2, Iters=20) ===
+(i)   CSR Creation Time:      8.313820e-01 sec
+(ii)  CSR Comm Time (Distr):  7.471800e-03 sec
+(iii) CSR Calc Time:          1.169391e-01 sec
+(iv)  Total CSR Time:         9.557929e-01 sec
+(v)   Total Dense Time (MPI): 6.831105e+00 sec
+----------------------------------------------------
+Dense Comm Time:              2.596167e+00 sec
+Dense Calc Time:              4.234938e+00 sec
+   ---------------------
+   --- Processes: P=4 ---
+Master: Generating N=10240, Sparsity=0.99...
+
+=== RESULTS (N=10240, Sparsity=0.99, P=4, Iters=20) ===
+(i)   CSR Creation Time:      9.021249e-01 sec
+(ii)  CSR Comm Time (Distr):  5.558891e-01 sec
+(iii) CSR Calc Time:          5.880091e-01 sec
+(iv)  Total CSR Time:         2.046023e+00 sec
+(v)   Total Dense Time (MPI): 7.688023e+00 sec
+----------------------------------------------------
+Dense Comm Time:              4.652005e+00 sec
+Dense Calc Time:              3.036018e+00 sec
+   ---------------------
+   --- Processes: P=8 ---
+Master: Generating N=10240, Sparsity=0.99...
+
+=== RESULTS (N=10240, Sparsity=0.99, P=8, Iters=20) ===
+(i)   CSR Creation Time:      7.165978e-01 sec
+(ii)  CSR Comm Time (Distr):  1.999891e-01 sec
+(iii) CSR Calc Time:          3.920021e-01 sec
+(iv)  Total CSR Time:         1.308589e+00 sec
+(v)   Total Dense Time (MPI): 8.954442e+00 sec
+----------------------------------------------------
+Dense Comm Time:              7.230442e+00 sec
+Dense Calc Time:              1.724000e+00 sec
+   ---------------------
+   --- Processes: P=16 ---
+Master: Generating N=10240, Sparsity=0.99...
+
+=== RESULTS (N=10240, Sparsity=0.99, P=16, Iters=20) ===
+(i)   CSR Creation Time:      8.364160e-01 sec
+(ii)  CSR Comm Time (Distr):  1.960211e-01 sec
+(iii) CSR Calc Time:          7.560260e-01 sec
+(iv)  Total CSR Time:         1.788463e+00 sec
+(v)   Total Dense Time (MPI): 2.225302e+01 sec
+----------------------------------------------------
+Dense Comm Time:              2.107299e+01 sec
+Dense Calc Time:              1.180033e+00 sec
+   ---------------------
+   --- Processes: P=32 ---
+Master: Generating N=10240, Sparsity=0.99...
+
+=== RESULTS (N=10240, Sparsity=0.99, P=32, Iters=20) ===
+(i)   CSR Creation Time:      9.056289e-01 sec
+(ii)  CSR Comm Time (Distr):  1.992669e-01 sec
+(iii) CSR Calc Time:          8.623290e-01 sec
+(iv)  Total CSR Time:         1.967225e+00 sec
+(v)   Total Dense Time (MPI): 2.710115e+01 sec
+----------------------------------------------------
+Dense Comm Time:              2.629386e+01 sec
+Dense Calc Time:              8.072870e-01 sec
+   ---------------------
