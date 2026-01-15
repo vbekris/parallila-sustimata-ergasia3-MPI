@@ -208,3 +208,12 @@ Running for Polynomial Degree n=999999 (Size N=1000000)
 --- P = 1 ---
 Master: Initializing polynomials (Degree n=999999, Coeffs N=1000000)...
 Rank 0 received local_A[0]=7 and B[0]=1
+[mpiexec@linux23] Sending Ctrl-C to processes as requested
+[mpiexec@linux23] Press Ctrl-C again to force abort
+--- P = 2 ---
+[mpiexec@linux23] Sending Ctrl-C to processes as requested
+[mpiexec@linux23] Press Ctrl-C again to force abort
+Ctrl-C caught... cleaning up processes
+Ctrl-C caught... cleaning up processes
+Ctrl-C caught... cleaning up processes
+Ctrl-C caught... cleaning up processes

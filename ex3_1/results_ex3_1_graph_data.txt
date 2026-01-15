@@ -1,0 +1,834 @@
+==================================================================
+ EXPERIMENT 3.1 DATA COLLECTION
+ Degrees: 3199 31999 102399 204799
+ Date: Πεμ 15 Ιαν 2026 08:16:55 μμ EET
+==================================================================
+
+------------------------------------------------------------------
+>>> POLYNOMIAL DEGREE n = 3199 (Size N=3200) <<<
+------------------------------------------------------------------
+   --- Processes: P=1 ---
+Master: Initializing polynomials (Degree n=3199, Coeffs N=3200)...
+Rank 0 received local_A[0]=7 and B[0]=1
+Rank 0 calculated partial C[0] = 7
+
+--- RESULTS ---
+Polynomial Degree n: 3199 (Coeffs N=3200)
+MPI Processes P:     1
+--------------------------------------
+(i)   Comm Time (Scatter/Bcast): 1.406670e-05 sec
+(ii)  Calc Time:                 6.258011e-03 sec
+(iii) Reduce Time:               2.503395e-05 sec
+(iv)  Total Parallel Time:       6.297112e-03 sec
+--------------------------------------
+   ---------------------
+   --- Processes: P=2 ---
+Master: Initializing polynomials (Degree n=3199, Coeffs N=3200)...
+Rank 0 received local_A[0]=7 and B[0]=1
+Rank 1 received local_A[0]=5 and B[0]=1
+Rank 0 calculated partial C[0] = 7
+Rank 1 calculated partial C[1600] = 5
+
+--- RESULTS ---
+Polynomial Degree n: 3199 (Coeffs N=3200)
+MPI Processes P:     2
+--------------------------------------
+(i)   Comm Time (Scatter/Bcast): 3.695488e-05 sec
+(ii)  Calc Time:                 3.148079e-03 sec
+(iii) Reduce Time:               6.389618e-05 sec
+(iv)  Total Parallel Time:       3.248930e-03 sec
+--------------------------------------
+   ---------------------
+   --- Processes: P=4 ---
+Master: Initializing polynomials (Degree n=3199, Coeffs N=3200)...
+Rank 0 received local_A[0]=7 and B[0]=1
+Rank 1 received local_A[0]=5 and B[0]=1
+Rank 2 received local_A[0]=5 and B[0]=1
+Rank 3 received local_A[0]=9 and B[0]=1
+Rank 0 calculated partial C[0] = 7
+Rank 2 calculated partial C[1600] = 5
+Rank 3 calculated partial C[2400] = 9
+Rank 1 calculated partial C[800] = 5
+
+--- RESULTS ---
+Polynomial Degree n: 3199 (Coeffs N=3200)
+MPI Processes P:     4
+--------------------------------------
+(i)   Comm Time (Scatter/Bcast): 3.598905e-02 sec
+(ii)  Calc Time:                 3.601003e-02 sec
+(iii) Reduce Time:               2.398992e-02 sec
+(iv)  Total Parallel Time:       9.598899e-02 sec
+--------------------------------------
+   ---------------------
+   --- Processes: P=8 ---
+Master: Initializing polynomials (Degree n=3199, Coeffs N=3200)...
+Rank 0 received local_A[0]=7 and B[0]=1
+Rank 1 received local_A[0]=8 and B[0]=1
+Rank 4 received local_A[0]=5 and B[0]=1
+Rank 5 received local_A[0]=10 and B[0]=1
+Rank 2 received local_A[0]=5 and B[0]=1
+Rank 3 received local_A[0]=1 and B[0]=1
+Rank 6 received local_A[0]=9 and B[0]=1
+Rank 7 received local_A[0]=9 and B[0]=1
+Rank 4 calculated partial C[1600] = 5
+Rank 0 calculated partial C[0] = 7
+Rank 1 calculated partial C[400] = 8
+Rank 5 calculated partial C[2000] = 10
+Rank 6 calculated partial C[2400] = 9
+Rank 7 calculated partial C[2800] = 9
+Rank 2 calculated partial C[800] = 5
+Rank 3 calculated partial C[1200] = 1
+
+--- RESULTS ---
+Polynomial Degree n: 3199 (Coeffs N=3200)
+MPI Processes P:     8
+--------------------------------------
+(i)   Comm Time (Scatter/Bcast): 5.997109e-02 sec
+(ii)  Calc Time:                 4.799700e-02 sec
+(iii) Reduce Time:               7.199383e-02 sec
+(iv)  Total Parallel Time:       1.799619e-01 sec
+--------------------------------------
+   ---------------------
+   --- Processes: P=16 ---
+Master: Initializing polynomials (Degree n=3199, Coeffs N=3200)...
+Rank 0 received local_A[0]=7 and B[0]=1
+Rank 8 received local_A[0]=5 and B[0]=1
+Rank 12 received local_A[0]=9 and B[0]=1
+Rank 2 received local_A[0]=8 and B[0]=1
+Rank 9 received local_A[0]=5 and B[0]=1
+Rank 3 received local_A[0]=1 and B[0]=1
+Rank 13 received local_A[0]=7 and B[0]=1
+Rank 1 received local_A[0]=7 and B[0]=1
+Rank 4 received local_A[0]=5 and B[0]=1
+Rank 5 received local_A[0]=10 and B[0]=1
+Rank 6 received local_A[0]=1 and B[0]=1
+Rank 14 received local_A[0]=9 and B[0]=1
+Rank 10 received local_A[0]=10 and B[0]=1
+Rank 15 received local_A[0]=1 and B[0]=1
+Rank 11 received local_A[0]=5 and B[0]=1
+Rank 7 received local_A[0]=1 and B[0]=1
+Rank 0 calculated partial C[0] = 7
+Rank 8 calculated partial C[1600] = 5
+Rank 2 calculated partial C[400] = 8
+Rank 9 calculated partial C[1800] = 5
+Rank 3 calculated partial C[600] = 1
+Rank 1 calculated partial C[200] = 7
+Rank 10 calculated partial C[2000] = 10
+Rank 11 calculated partial C[2200] = 5
+Rank 12 calculated partial C[2400] = 9
+Rank 4 calculated partial C[800] = 5
+Rank 14 calculated partial C[2800] = 9
+Rank 5 calculated partial C[1000] = 10
+Rank 6 calculated partial C[1200] = 1
+Rank 13 calculated partial C[2600] = 7
+Rank 7 calculated partial C[1400] = 1
+Rank 15 calculated partial C[3000] = 1
+
+--- RESULTS ---
+Polynomial Degree n: 3199 (Coeffs N=3200)
+MPI Processes P:     16
+--------------------------------------
+(i)   Comm Time (Scatter/Bcast): 2.383900e-02 sec
+(ii)  Calc Time:                 2.614498e-02 sec
+(iii) Reduce Time:               7.704306e-02 sec
+(iv)  Total Parallel Time:       1.270270e-01 sec
+--------------------------------------
+   ---------------------
+   --- Processes: P=32 ---
+Master: Initializing polynomials (Degree n=3199, Coeffs N=3200)...
+Rank 24 received local_A[0]=9 and B[0]=1
+Rank 8 received local_A[0]=5 and B[0]=1
+Rank 0 received local_A[0]=7 and B[0]=1
+Rank 16 received local_A[0]=5 and B[0]=1
+Rank 25 received local_A[0]=2 and B[0]=1
+Rank 17 received local_A[0]=1 and B[0]=1
+Rank 26 received local_A[0]=7 and B[0]=1
+Rank 27 received local_A[0]=10 and B[0]=1
+Rank 1 received local_A[0]=5 and B[0]=1
+Rank 18 received local_A[0]=5 and B[0]=1
+Rank 9 received local_A[0]=7 and B[0]=1
+Rank 20 received local_A[0]=10 and B[0]=1
+Rank 4 received local_A[0]=8 and B[0]=1
+Rank 10 received local_A[0]=10 and B[0]=1
+Rank 28 received local_A[0]=9 and B[0]=1
+Rank 5 received local_A[0]=5 and B[0]=1
+Rank 11 received local_A[0]=4 and B[0]=1
+Rank 29 received local_A[0]=6 and B[0]=1
+Rank 6 received local_A[0]=1 and B[0]=1
+Rank 30 received local_A[0]=1 and B[0]=1
+Rank 2 received local_A[0]=7 and B[0]=1
+Rank 31 received local_A[0]=8 and B[0]=1
+Rank 12 received local_A[0]=1 and B[0]=1
+Rank 19 received local_A[0]=2 and B[0]=1
+Rank 13 received local_A[0]=9 and B[0]=1
+Rank 14 received local_A[0]=1 and B[0]=1
+Rank 21 received local_A[0]=3 and B[0]=1
+Rank 7 received local_A[0]=4 and B[0]=1
+Rank 15 received local_A[0]=7 and B[0]=1
+Rank 22 received local_A[0]=5 and B[0]=1
+Rank 23 received local_A[0]=6 and B[0]=1
+Rank 3 received local_A[0]=8 and B[0]=1
+Rank 24 calculated partial C[2400] = 9
+Rank 28 calculated partial C[2800] = 9
+Rank 12 calculated partial C[1200] = 1
+Rank 20 calculated partial C[2000] = 10
+Rank 25 calculated partial C[2500] = 2
+Rank 8 calculated partial C[800] = 5
+Rank 29 calculated partial C[2900] = 6
+Rank 26 calculated partial C[2600] = 7
+Rank 9 calculated partial C[900] = 7
+Rank 30 calculated partial C[3000] = 1
+Rank 27 calculated partial C[2700] = 10
+Rank 10 calculated partial C[1000] = 10
+Rank 31 calculated partial C[3100] = 8
+Rank 4 calculated partial C[400] = 8
+Rank 11 calculated partial C[1100] = 4
+Rank 0 calculated partial C[0] = 7
+Rank 16 calculated partial C[1600] = 5
+Rank 5 calculated partial C[500] = 5
+Rank 1 calculated partial C[100] = 5
+Rank 14 calculated partial C[1400] = 1
+Rank 18 calculated partial C[1800] = 5
+Rank 6 calculated partial C[600] = 1
+Rank 17 calculated partial C[1700] = 1
+Rank 21 calculated partial C[2100] = 3
+Rank 19 calculated partial C[1900] = 2
+Rank 22 calculated partial C[2200] = 5
+Rank 23 calculated partial C[2300] = 6
+Rank 13 calculated partial C[1300] = 9
+Rank 2 calculated partial C[200] = 7
+Rank 3 calculated partial C[300] = 8
+Rank 7 calculated partial C[700] = 4
+Rank 15 calculated partial C[1500] = 7
+
+--- RESULTS ---
+Polynomial Degree n: 3199 (Coeffs N=3200)
+MPI Processes P:     32
+--------------------------------------
+(i)   Comm Time (Scatter/Bcast): 4.906988e-02 sec
+(ii)  Calc Time:                 3.596902e-02 sec
+(iii) Reduce Time:               7.198596e-02 sec
+(iv)  Total Parallel Time:       1.570249e-01 sec
+--------------------------------------
+   ---------------------
+------------------------------------------------------------------
+>>> POLYNOMIAL DEGREE n = 31999 (Size N=32000) <<<
+------------------------------------------------------------------
+   --- Processes: P=1 ---
+Master: Initializing polynomials (Degree n=31999, Coeffs N=32000)...
+Rank 0 received local_A[0]=7 and B[0]=1
+Rank 0 calculated partial C[0] = 7
+
+--- RESULTS ---
+Polynomial Degree n: 31999 (Coeffs N=32000)
+MPI Processes P:     1
+--------------------------------------
+(i)   Comm Time (Scatter/Bcast): 7.200241e-05 sec
+(ii)  Calc Time:                 9.433920e-01 sec
+(iii) Reduce Time:               2.100468e-04 sec
+(iv)  Total Parallel Time:       9.436741e-01 sec
+--------------------------------------
+   ---------------------
+   --- Processes: P=2 ---
+Master: Initializing polynomials (Degree n=31999, Coeffs N=32000)...
+Rank 0 received local_A[0]=7 and B[0]=1
+Rank 1 received local_A[0]=4 and B[0]=1
+Rank 0 calculated partial C[0] = 7
+Rank 1 calculated partial C[16000] = 4
+
+--- RESULTS ---
+Polynomial Degree n: 31999 (Coeffs N=32000)
+MPI Processes P:     2
+--------------------------------------
+(i)   Comm Time (Scatter/Bcast): 3.027916e-04 sec
+(ii)  Calc Time:                 5.556922e-01 sec
+(iii) Reduce Time:               4.749298e-04 sec
+(iv)  Total Parallel Time:       5.564699e-01 sec
+--------------------------------------
+   ---------------------
+   --- Processes: P=4 ---
+Master: Initializing polynomials (Degree n=31999, Coeffs N=32000)...
+Rank 0 received local_A[0]=7 and B[0]=1
+Rank 1 received local_A[0]=8 and B[0]=1
+Rank 2 received local_A[0]=4 and B[0]=1
+Rank 3 received local_A[0]=1 and B[0]=1
+Rank 0 calculated partial C[0] = 7
+Rank 2 calculated partial C[16000] = 4
+Rank 3 calculated partial C[24000] = 1
+Rank 1 calculated partial C[8000] = 8
+
+--- RESULTS ---
+Polynomial Degree n: 31999 (Coeffs N=32000)
+MPI Processes P:     4
+--------------------------------------
+(i)   Comm Time (Scatter/Bcast): 5.149841e-04 sec
+(ii)  Calc Time:                 3.853960e-01 sec
+(iii) Reduce Time:               3.953195e-02 sec
+(iv)  Total Parallel Time:       4.254429e-01 sec
+--------------------------------------
+   ---------------------
+   --- Processes: P=8 ---
+Master: Initializing polynomials (Degree n=31999, Coeffs N=32000)...
+Rank 4 received local_A[0]=4 and B[0]=1
+Rank 0 received local_A[0]=7 and B[0]=1
+Rank 5 received local_A[0]=4 and B[0]=1
+Rank 1 received local_A[0]=1 and B[0]=1
+Rank 2 received local_A[0]=8 and B[0]=1
+Rank 3 received local_A[0]=9 and B[0]=1
+Rank 6 received local_A[0]=1 and B[0]=1
+Rank 7 received local_A[0]=9 and B[0]=1
+Rank 4 calculated partial C[16000] = 4
+Rank 5 calculated partial C[20000] = 4
+Rank 6 calculated partial C[24000] = 1
+Rank 7 calculated partial C[28000] = 9
+Rank 0 calculated partial C[0] = 7
+Rank 2 calculated partial C[8000] = 8
+Rank 3 calculated partial C[12000] = 9
+Rank 1 calculated partial C[4000] = 1
+
+--- RESULTS ---
+Polynomial Degree n: 31999 (Coeffs N=32000)
+MPI Processes P:     8
+--------------------------------------
+(i)   Comm Time (Scatter/Bcast): 5.857801e-02 sec
+(ii)  Calc Time:                 2.357190e-01 sec
+(iii) Reduce Time:               8.001423e-02 sec
+(iv)  Total Parallel Time:       3.743112e-01 sec
+--------------------------------------
+   ---------------------
+   --- Processes: P=16 ---
+Master: Initializing polynomials (Degree n=31999, Coeffs N=32000)...
+Rank 8 received local_A[0]=4 and B[0]=1
+Rank 0 received local_A[0]=7 and B[0]=1
+Rank 2 received local_A[0]=1 and B[0]=1
+Rank 4 received local_A[0]=8 and B[0]=1
+Rank 12 received local_A[0]=1 and B[0]=1
+Rank 10 received local_A[0]=4 and B[0]=1
+Rank 5 received local_A[0]=6 and B[0]=1
+Rank 13 received local_A[0]=10 and B[0]=1
+Rank 14 received local_A[0]=9 and B[0]=1
+Rank 6 received local_A[0]=9 and B[0]=1
+Rank 7 received local_A[0]=3 and B[0]=1
+Rank 9 received local_A[0]=2 and B[0]=1
+Rank 15 received local_A[0]=3 and B[0]=1
+Rank 1 received local_A[0]=10 and B[0]=1
+Rank 11 received local_A[0]=4 and B[0]=1
+Rank 3 received local_A[0]=3 and B[0]=1
+Rank 8 calculated partial C[16000] = 4
+Rank 4 calculated partial C[8000] = 8
+Rank 10 calculated partial C[20000] = 4
+Rank 6 calculated partial C[12000] = 9
+Rank 11 calculated partial C[22000] = 4
+Rank 12 calculated partial C[24000] = 1
+Rank 14 calculated partial C[28000] = 9
+Rank 15 calculated partial C[30000] = 3
+Rank 0 calculated partial C[0] = 7
+Rank 5 calculated partial C[10000] = 6
+Rank 13 calculated partial C[26000] = 10
+Rank 2 calculated partial C[4000] = 1
+Rank 7 calculated partial C[14000] = 3
+Rank 9 calculated partial C[18000] = 2
+Rank 1 calculated partial C[2000] = 10
+Rank 3 calculated partial C[6000] = 3
+
+--- RESULTS ---
+Polynomial Degree n: 31999 (Coeffs N=32000)
+MPI Processes P:     16
+--------------------------------------
+(i)   Comm Time (Scatter/Bcast): 9.199309e-02 sec
+(ii)  Calc Time:                 1.519918e-01 sec
+(iii) Reduce Time:               4.743814e-02 sec
+(iv)  Total Parallel Time:       2.914231e-01 sec
+--------------------------------------
+   ---------------------
+   --- Processes: P=32 ---
+Master: Initializing polynomials (Degree n=31999, Coeffs N=32000)...
+Rank 24 received local_A[0]=1 and B[0]=1
+Rank 8 received local_A[0]=8 and B[0]=1
+Rank 25 received local_A[0]=9 and B[0]=1
+Rank 26 received local_A[0]=10 and B[0]=1
+Rank 27 received local_A[0]=5 and B[0]=1
+Rank 16 received local_A[0]=4 and B[0]=1
+Rank 17 received local_A[0]=3 and B[0]=1
+Rank 10 received local_A[0]=6 and B[0]=1
+Rank 18 received local_A[0]=2 and B[0]=1
+Rank 11 received local_A[0]=7 and B[0]=1
+Rank 28 received local_A[0]=9 and B[0]=1
+Rank 4 received local_A[0]=1 and B[0]=1
+Rank 12 received local_A[0]=9 and B[0]=1
+Rank 0 received local_A[0]=7 and B[0]=1
+Rank 20 received local_A[0]=4 and B[0]=1
+Rank 29 received local_A[0]=8 and B[0]=1
+Rank 5 received local_A[0]=2 and B[0]=1
+Rank 9 received local_A[0]=8 and B[0]=1
+Rank 14 received local_A[0]=3 and B[0]=1
+Rank 2 received local_A[0]=10 and B[0]=1
+Rank 21 received local_A[0]=5 and B[0]=1
+Rank 30 received local_A[0]=3 and B[0]=1
+Rank 6 received local_A[0]=3 and B[0]=1
+Rank 13 received local_A[0]=5 and B[0]=1
+Rank 3 received local_A[0]=1 and B[0]=1
+Rank 19 received local_A[0]=4 and B[0]=1
+Rank 22 received local_A[0]=4 and B[0]=1
+Rank 31 received local_A[0]=10 and B[0]=1
+Rank 7 received local_A[0]=7 and B[0]=1
+Rank 15 received local_A[0]=6 and B[0]=1
+Rank 1 received local_A[0]=10 and B[0]=1
+Rank 23 received local_A[0]=5 and B[0]=1
+Rank 4 calculated partial C[4000] = 1
+Rank 12 calculated partial C[12000] = 9
+Rank 20 calculated partial C[20000] = 4
+Rank 28 calculated partial C[28000] = 9
+Rank 24 calculated partial C[24000] = 1
+Rank 5 calculated partial C[5000] = 2
+Rank 8 calculated partial C[8000] = 8
+Rank 13 calculated partial C[13000] = 5
+Rank 21 calculated partial C[21000] = 5
+Rank 29 calculated partial C[29000] = 8
+Rank 25 calculated partial C[25000] = 9
+Rank 6 calculated partial C[6000] = 3
+Rank 9 calculated partial C[9000] = 8
+Rank 14 calculated partial C[14000] = 3
+Rank 22 calculated partial C[22000] = 4
+Rank 30 calculated partial C[30000] = 3
+Rank 26 calculated partial C[26000] = 10
+Rank 10 calculated partial C[10000] = 6
+Rank 15 calculated partial C[15000] = 6
+Rank 0 calculated partial C[0] = 7
+Rank 16 calculated partial C[16000] = 4
+Rank 23 calculated partial C[23000] = 5
+Rank 31 calculated partial C[31000] = 10
+Rank 27 calculated partial C[27000] = 5
+Rank 7 calculated partial C[7000] = 7
+Rank 11 calculated partial C[11000] = 7
+Rank 1 calculated partial C[1000] = 10
+Rank 17 calculated partial C[17000] = 3
+Rank 18 calculated partial C[18000] = 2
+Rank 19 calculated partial C[19000] = 4
+Rank 2 calculated partial C[2000] = 10
+Rank 3 calculated partial C[3000] = 1
+
+--- RESULTS ---
+Polynomial Degree n: 31999 (Coeffs N=32000)
+MPI Processes P:     32
+--------------------------------------
+(i)   Comm Time (Scatter/Bcast): 8.549285e-02 sec
+(ii)  Calc Time:                 7.654500e-02 sec
+(iii) Reduce Time:               1.117480e-01 sec
+(iv)  Total Parallel Time:       2.737858e-01 sec
+--------------------------------------
+   ---------------------
+------------------------------------------------------------------
+>>> POLYNOMIAL DEGREE n = 102399 (Size N=102400) <<<
+------------------------------------------------------------------
+   --- Processes: P=1 ---
+Master: Initializing polynomials (Degree n=102399, Coeffs N=102400)...
+Rank 0 received local_A[0]=7 and B[0]=1
+Rank 0 calculated partial C[0] = 7
+
+--- RESULTS ---
+Polynomial Degree n: 102399 (Coeffs N=102400)
+MPI Processes P:     1
+--------------------------------------
+(i)   Comm Time (Scatter/Bcast): 2.470016e-04 sec
+(ii)  Calc Time:                 8.112532e+00 sec
+(iii) Reduce Time:               5.140305e-04 sec
+(iv)  Total Parallel Time:       8.113293e+00 sec
+--------------------------------------
+   ---------------------
+   --- Processes: P=2 ---
+Master: Initializing polynomials (Degree n=102399, Coeffs N=102400)...
+Rank 0 received local_A[0]=7 and B[0]=1
+Rank 1 received local_A[0]=8 and B[0]=1
+Rank 0 calculated partial C[0] = 7
+Rank 1 calculated partial C[51200] = 8
+
+--- RESULTS ---
+Polynomial Degree n: 102399 (Coeffs N=102400)
+MPI Processes P:     2
+--------------------------------------
+(i)   Comm Time (Scatter/Bcast): 5.850792e-04 sec
+(ii)  Calc Time:                 3.881763e+00 sec
+(iii) Reduce Time:               1.266956e-03 sec
+(iv)  Total Parallel Time:       3.883615e+00 sec
+--------------------------------------
+   ---------------------
+   --- Processes: P=4 ---
+Master: Initializing polynomials (Degree n=102399, Coeffs N=102400)...
+Rank 0 received local_A[0]=7 and B[0]=1
+Rank 1 received local_A[0]=5 and B[0]=1
+Rank 2 received local_A[0]=8 and B[0]=1
+Rank 3 received local_A[0]=10 and B[0]=1
+Rank 0 calculated partial C[0] = 7
+Rank 1 calculated partial C[25600] = 5
+Rank 2 calculated partial C[51200] = 8
+Rank 3 calculated partial C[76800] = 10
+
+--- RESULTS ---
+Polynomial Degree n: 102399 (Coeffs N=102400)
+MPI Processes P:     4
+--------------------------------------
+(i)   Comm Time (Scatter/Bcast): 5.223393e-02 sec
+(ii)  Calc Time:                 2.778070e+00 sec
+(iii) Reduce Time:               1.561880e-03 sec
+(iv)  Total Parallel Time:       2.831866e+00 sec
+--------------------------------------
+   ---------------------
+   --- Processes: P=8 ---
+Master: Initializing polynomials (Degree n=102399, Coeffs N=102400)...
+Rank 4 received local_A[0]=8 and B[0]=1
+Rank 6 received local_A[0]=10 and B[0]=1
+Rank 0 received local_A[0]=7 and B[0]=1
+Rank 1 received local_A[0]=10 and B[0]=1
+Rank 7 received local_A[0]=3 and B[0]=1
+Rank 5 received local_A[0]=8 and B[0]=1
+Rank 2 received local_A[0]=5 and B[0]=1
+Rank 3 received local_A[0]=9 and B[0]=1
+Rank 4 calculated partial C[51200] = 8
+Rank 5 calculated partial C[64000] = 8
+Rank 6 calculated partial C[76800] = 10
+Rank 7 calculated partial C[89600] = 3
+Rank 0 calculated partial C[0] = 7
+Rank 1 calculated partial C[12800] = 10
+Rank 2 calculated partial C[25600] = 5
+Rank 3 calculated partial C[38400] = 9
+
+--- RESULTS ---
+Polynomial Degree n: 102399 (Coeffs N=102400)
+MPI Processes P:     8
+--------------------------------------
+(i)   Comm Time (Scatter/Bcast): 6.798506e-02 sec
+(ii)  Calc Time:                 1.971965e+00 sec
+(iii) Reduce Time:               1.720450e-01 sec
+(iv)  Total Parallel Time:       2.211995e+00 sec
+--------------------------------------
+   ---------------------
+   --- Processes: P=16 ---
+Master: Initializing polynomials (Degree n=102399, Coeffs N=102400)...
+Rank 4 received local_A[0]=5 and B[0]=1
+Rank 12 received local_A[0]=10 and B[0]=1
+Rank 8 received local_A[0]=8 and B[0]=1
+Rank 6 received local_A[0]=9 and B[0]=1
+Rank 0 received local_A[0]=7 and B[0]=1
+Rank 13 received local_A[0]=1 and B[0]=1
+Rank 9 received local_A[0]=10 and B[0]=1
+Rank 1 received local_A[0]=3 and B[0]=1
+Rank 14 received local_A[0]=3 and B[0]=1
+Rank 10 received local_A[0]=8 and B[0]=1
+Rank 2 received local_A[0]=10 and B[0]=1
+Rank 15 received local_A[0]=2 and B[0]=1
+Rank 11 received local_A[0]=9 and B[0]=1
+Rank 5 received local_A[0]=9 and B[0]=1
+Rank 3 received local_A[0]=10 and B[0]=1
+Rank 7 received local_A[0]=4 and B[0]=1
+Rank 4 calculated partial C[25600] = 5
+Rank 12 calculated partial C[76800] = 10
+Rank 8 calculated partial C[51200] = 8
+Rank 5 calculated partial C[32000] = 9
+Rank 0 calculated partial C[0] = 7
+Rank 13 calculated partial C[83200] = 1
+Rank 9 calculated partial C[57600] = 10
+Rank 6 calculated partial C[38400] = 9
+Rank 1 calculated partial C[6400] = 3
+Rank 14 calculated partial C[89600] = 3
+Rank 10 calculated partial C[64000] = 8
+Rank 7 calculated partial C[44800] = 4
+Rank 2 calculated partial C[12800] = 10
+Rank 15 calculated partial C[96000] = 2
+Rank 11 calculated partial C[70400] = 9
+Rank 3 calculated partial C[19200] = 10
+
+--- RESULTS ---
+Polynomial Degree n: 102399 (Coeffs N=102400)
+MPI Processes P:     16
+--------------------------------------
+(i)   Comm Time (Scatter/Bcast): 1.992488e-02 sec
+(ii)  Calc Time:                 7.986760e-01 sec
+(iii) Reduce Time:               2.185321e-02 sec
+(iv)  Total Parallel Time:       8.404541e-01 sec
+--------------------------------------
+   ---------------------
+   --- Processes: P=32 ---
+Master: Initializing polynomials (Degree n=102399, Coeffs N=102400)...
+Rank 24 received local_A[0]=10 and B[0]=1
+Rank 8 received local_A[0]=5 and B[0]=1
+Rank 16 received local_A[0]=8 and B[0]=1
+Rank 25 received local_A[0]=5 and B[0]=1
+Rank 26 received local_A[0]=1 and B[0]=1
+Rank 27 received local_A[0]=1 and B[0]=1
+Rank 17 received local_A[0]=3 and B[0]=1
+Rank 10 received local_A[0]=9 and B[0]=1
+Rank 18 received local_A[0]=10 and B[0]=1
+Rank 12 received local_A[0]=9 and B[0]=1
+Rank 20 received local_A[0]=8 and B[0]=1
+Rank 28 received local_A[0]=3 and B[0]=1
+Rank 21 received local_A[0]=3 and B[0]=1
+Rank 29 received local_A[0]=4 and B[0]=1
+Rank 14 received local_A[0]=4 and B[0]=1
+Rank 4 received local_A[0]=10 and B[0]=1
+Rank 0 received local_A[0]=7 and B[0]=1
+Rank 9 received local_A[0]=7 and B[0]=1
+Rank 22 received local_A[0]=9 and B[0]=1
+Rank 30 received local_A[0]=2 and B[0]=1
+Rank 15 received local_A[0]=9 and B[0]=1
+Rank 6 received local_A[0]=10 and B[0]=1
+Rank 31 received local_A[0]=1 and B[0]=1
+Rank 13 received local_A[0]=4 and B[0]=1
+Rank 7 received local_A[0]=2 and B[0]=1
+Rank 5 received local_A[0]=4 and B[0]=1
+Rank 1 received local_A[0]=5 and B[0]=1
+Rank 11 received local_A[0]=10 and B[0]=1
+Rank 19 received local_A[0]=2 and B[0]=1
+Rank 2 received local_A[0]=3 and B[0]=1
+Rank 3 received local_A[0]=1 and B[0]=1
+Rank 23 received local_A[0]=10 and B[0]=1
+Rank 8 calculated partial C[25600] = 5
+Rank 20 calculated partial C[64000] = 8
+Rank 12 calculated partial C[38400] = 9
+Rank 4 calculated partial C[12800] = 10
+Rank 0 calculated partial C[0] = 7
+Rank 24 calculated partial C[76800] = 10
+Rank 9 calculated partial C[28800] = 7
+Rank 22 calculated partial C[70400] = 9
+Rank 28 calculated partial C[89600] = 3
+Rank 13 calculated partial C[41600] = 4
+Rank 5 calculated partial C[16000] = 4
+Rank 16 calculated partial C[51200] = 8
+Rank 2 calculated partial C[6400] = 3
+Rank 25 calculated partial C[80000] = 5
+Rank 10 calculated partial C[32000] = 9
+Rank 23 calculated partial C[73600] = 10
+Rank 30 calculated partial C[96000] = 2
+Rank 6 calculated partial C[19200] = 10
+Rank 18 calculated partial C[57600] = 10
+Rank 3 calculated partial C[9600] = 1
+Rank 26 calculated partial C[83200] = 1
+Rank 21 calculated partial C[67200] = 3
+Rank 31 calculated partial C[99200] = 1
+Rank 7 calculated partial C[22400] = 2
+Rank 17 calculated partial C[54400] = 3
+Rank 1 calculated partial C[3200] = 5
+Rank 27 calculated partial C[86400] = 1
+Rank 11 calculated partial C[35200] = 10
+Rank 29 calculated partial C[92800] = 4
+Rank 14 calculated partial C[44800] = 4
+Rank 19 calculated partial C[60800] = 2
+Rank 15 calculated partial C[48000] = 9
+
+--- RESULTS ---
+Polynomial Degree n: 102399 (Coeffs N=102400)
+MPI Processes P:     32
+--------------------------------------
+(i)   Comm Time (Scatter/Bcast): 1.399982e-01 sec
+(ii)  Calc Time:                 6.612899e-01 sec
+(iii) Reduce Time:               1.987379e-01 sec
+(iv)  Total Parallel Time:       1.000026e+00 sec
+--------------------------------------
+   ---------------------
+------------------------------------------------------------------
+>>> POLYNOMIAL DEGREE n = 204799 (Size N=204800) <<<
+------------------------------------------------------------------
+   --- Processes: P=1 ---
+Master: Initializing polynomials (Degree n=204799, Coeffs N=204800)...
+Rank 0 received local_A[0]=7 and B[0]=1
+Rank 0 calculated partial C[0] = 7
+
+--- RESULTS ---
+Polynomial Degree n: 204799 (Coeffs N=204800)
+MPI Processes P:     1
+--------------------------------------
+(i)   Comm Time (Scatter/Bcast): 4.489422e-04 sec
+(ii)  Calc Time:                 3.232180e+01 sec
+(iii) Reduce Time:               1.034975e-03 sec
+(iv)  Total Parallel Time:       3.232328e+01 sec
+--------------------------------------
+   ---------------------
+   --- Processes: P=2 ---
+Master: Initializing polynomials (Degree n=204799, Coeffs N=204800)...
+Rank 0 received local_A[0]=7 and B[0]=1
+Rank 1 received local_A[0]=6 and B[0]=1
+Rank 0 calculated partial C[0] = 7
+Rank 1 calculated partial C[102400] = 6
+
+--- RESULTS ---
+Polynomial Degree n: 204799 (Coeffs N=204800)
+MPI Processes P:     2
+--------------------------------------
+(i)   Comm Time (Scatter/Bcast): 9.508133e-04 sec
+(ii)  Calc Time:                 1.941814e+01 sec
+(iii) Reduce Time:               2.334118e-03 sec
+(iv)  Total Parallel Time:       1.942142e+01 sec
+--------------------------------------
+   ---------------------
+   --- Processes: P=4 ---
+Master: Initializing polynomials (Degree n=204799, Coeffs N=204800)...
+Rank 0 received local_A[0]=7 and B[0]=1
+Rank 2 received local_A[0]=6 and B[0]=1
+Rank 1 received local_A[0]=8 and B[0]=1
+Rank 3 received local_A[0]=3 and B[0]=1
+Rank 0 calculated partial C[0] = 7
+Rank 2 calculated partial C[102400] = 6
+Rank 1 calculated partial C[51200] = 8
+Rank 3 calculated partial C[153600] = 3
+
+--- RESULTS ---
+Polynomial Degree n: 204799 (Coeffs N=204800)
+MPI Processes P:     4
+--------------------------------------
+(i)   Comm Time (Scatter/Bcast): 1.679988e-01 sec
+(ii)  Calc Time:                 1.545207e+01 sec
+(iii) Reduce Time:               9.695005e-02 sec
+(iv)  Total Parallel Time:       1.571702e+01 sec
+--------------------------------------
+   ---------------------
+   --- Processes: P=8 ---
+Master: Initializing polynomials (Degree n=204799, Coeffs N=204800)...
+Rank 0 received local_A[0]=7 and B[0]=1
+Rank 4 received local_A[0]=6 and B[0]=1
+Rank 2 received local_A[0]=8 and B[0]=1
+Rank 5 received local_A[0]=5 and B[0]=1
+Rank 6 received local_A[0]=3 and B[0]=1
+Rank 3 received local_A[0]=10 and B[0]=1
+Rank 7 received local_A[0]=2 and B[0]=1
+Rank 1 received local_A[0]=5 and B[0]=1
+Rank 4 calculated partial C[102400] = 6
+Rank 6 calculated partial C[153600] = 3
+Rank 7 calculated partial C[179200] = 2
+Rank 5 calculated partial C[128000] = 5
+Rank 0 calculated partial C[0] = 7
+Rank 2 calculated partial C[51200] = 8
+Rank 3 calculated partial C[76800] = 10
+Rank 1 calculated partial C[25600] = 5
+
+--- RESULTS ---
+Polynomial Degree n: 204799 (Coeffs N=204800)
+MPI Processes P:     8
+--------------------------------------
+(i)   Comm Time (Scatter/Bcast): 1.519918e-01 sec
+(ii)  Calc Time:                 7.879980e+00 sec
+(iii) Reduce Time:               2.800620e-01 sec
+(iv)  Total Parallel Time:       8.312034e+00 sec
+--------------------------------------
+   ---------------------
+   --- Processes: P=16 ---
+Master: Initializing polynomials (Degree n=204799, Coeffs N=204800)...
+Rank 4 received local_A[0]=8 and B[0]=1
+Rank 6 received local_A[0]=10 and B[0]=1
+Rank 9 received local_A[0]=1 and B[0]=1
+Rank 10 received local_A[0]=5 and B[0]=1
+Rank 12 received local_A[0]=3 and B[0]=1
+Rank 14 received local_A[0]=2 and B[0]=1
+Rank 15 received local_A[0]=8 and B[0]=1
+Rank 5 received local_A[0]=8 and B[0]=1
+Rank 0 received local_A[0]=7 and B[0]=1
+Rank 8 received local_A[0]=6 and B[0]=1
+Rank 11 received local_A[0]=8 and B[0]=1
+Rank 7 received local_A[0]=3 and B[0]=1
+Rank 2 received local_A[0]=5 and B[0]=1
+Rank 13 received local_A[0]=8 and B[0]=1
+Rank 1 received local_A[0]=10 and B[0]=1
+Rank 3 received local_A[0]=9 and B[0]=1
+Rank 4 calculated partial C[51200] = 8
+Rank 5 calculated partial C[64000] = 8
+Rank 0 calculated partial C[0] = 7
+Rank 8 calculated partial C[102400] = 6
+Rank 6 calculated partial C[76800] = 10
+Rank 2 calculated partial C[25600] = 5
+Rank 7 calculated partial C[89600] = 3
+Rank 3 calculated partial C[38400] = 9
+Rank 12 calculated partial C[153600] = 3
+Rank 13 calculated partial C[166400] = 8
+Rank 14 calculated partial C[179200] = 2
+Rank 15 calculated partial C[192000] = 8
+Rank 10 calculated partial C[128000] = 5
+Rank 11 calculated partial C[140800] = 8
+Rank 1 calculated partial C[12800] = 10
+Rank 9 calculated partial C[115200] = 1
+
+--- RESULTS ---
+Polynomial Degree n: 204799 (Coeffs N=204800)
+MPI Processes P:     16
+--------------------------------------
+(i)   Comm Time (Scatter/Bcast): 4.093990e-01 sec
+(ii)  Calc Time:                 4.188857e+00 sec
+(iii) Reduce Time:               2.594159e-01 sec
+(iv)  Total Parallel Time:       4.857672e+00 sec
+--------------------------------------
+   ---------------------
+   --- Processes: P=32 ---
+Master: Initializing polynomials (Degree n=204799, Coeffs N=204800)...
+Rank 4 received local_A[0]=5 and B[0]=1
+Rank 28 received local_A[0]=2 and B[0]=1
+Rank 12 received local_A[0]=10 and B[0]=1
+Rank 20 received local_A[0]=5 and B[0]=1
+Rank 5 received local_A[0]=9 and B[0]=1
+Rank 29 received local_A[0]=6 and B[0]=1
+Rank 13 received local_A[0]=1 and B[0]=1
+Rank 22 received local_A[0]=8 and B[0]=1
+Rank 30 received local_A[0]=8 and B[0]=1
+Rank 14 received local_A[0]=3 and B[0]=1
+Rank 23 received local_A[0]=8 and B[0]=1
+Rank 6 received local_A[0]=9 and B[0]=1
+Rank 31 received local_A[0]=10 and B[0]=1
+Rank 24 received local_A[0]=3 and B[0]=1
+Rank 8 received local_A[0]=8 and B[0]=1
+Rank 15 received local_A[0]=2 and B[0]=1
+Rank 16 received local_A[0]=6 and B[0]=1
+Rank 7 received local_A[0]=4 and B[0]=1
+Rank 25 received local_A[0]=7 and B[0]=1
+Rank 9 received local_A[0]=10 and B[0]=1
+Rank 0 received local_A[0]=7 and B[0]=1
+Rank 18 received local_A[0]=1 and B[0]=1
+Rank 26 received local_A[0]=8 and B[0]=1
+Rank 1 received local_A[0]=3 and B[0]=1
+Rank 19 received local_A[0]=10 and B[0]=1
+Rank 27 received local_A[0]=10 and B[0]=1
+Rank 10 received local_A[0]=8 and B[0]=1
+Rank 2 received local_A[0]=10 and B[0]=1
+Rank 21 received local_A[0]=10 and B[0]=1
+Rank 17 received local_A[0]=10 and B[0]=1
+Rank 11 received local_A[0]=9 and B[0]=1
+Rank 3 received local_A[0]=10 and B[0]=1
+Rank 4 calculated partial C[25600] = 5
+Rank 28 calculated partial C[179200] = 2
+Rank 12 calculated partial C[76800] = 10
+Rank 20 calculated partial C[128000] = 5
+Rank 5 calculated partial C[32000] = 9
+Rank 29 calculated partial C[185600] = 6
+Rank 22 calculated partial C[140800] = 8
+Rank 6 calculated partial C[38400] = 9
+Rank 30 calculated partial C[192000] = 8
+Rank 23 calculated partial C[147200] = 8
+Rank 7 calculated partial C[44800] = 4
+Rank 31 calculated partial C[198400] = 10
+Rank 13 calculated partial C[83200] = 1
+Rank 14 calculated partial C[89600] = 3
+Rank 15 calculated partial C[96000] = 2
+Rank 24 calculated partial C[153600] = 3
+Rank 8 calculated partial C[51200] = 8
+Rank 21 calculated partial C[134400] = 10
+Rank 16 calculated partial C[102400] = 6
+Rank 25 calculated partial C[160000] = 7
+Rank 10 calculated partial C[64000] = 8
+Rank 17 calculated partial C[108800] = 10
+Rank 26 calculated partial C[166400] = 8
+Rank 11 calculated partial C[70400] = 9
+Rank 27 calculated partial C[172800] = 10
+Rank 18 calculated partial C[115200] = 1
+Rank 19 calculated partial C[121600] = 10
+Rank 0 calculated partial C[0] = 7
+Rank 9 calculated partial C[57600] = 10
+Rank 1 calculated partial C[6400] = 3
+Rank 2 calculated partial C[12800] = 10
+Rank 3 calculated partial C[19200] = 10
+
+--- RESULTS ---
+Polynomial Degree n: 204799 (Coeffs N=204800)
+MPI Processes P:     32
+--------------------------------------
+(i)   Comm Time (Scatter/Bcast): 3.537419e-01 sec
+(ii)  Calc Time:                 2.116750e+00 sec
+(iii) Reduce Time:               5.881481e-01 sec
+(iv)  Total Parallel Time:       3.058640e+00 sec
+--------------------------------------
+   ---------------------
